@@ -1,4 +1,4 @@
-<p align="center"> Advanced Dorks for Hacking & Bug Bounty! </p>
+<b align="center"> Advanced Dorks for Hacking & Bug Bounty! </b>
 
 <p align="center">
     <a href="https://snowden-pc.github.io/google_dork_helper/" target="_blank">
@@ -14,3 +14,5 @@
         <span style="font-size: 20px; font-weight: bold; color: #333;">XSS Fuzzer</span>
     </a>
 </p>
+
+<p align="center">Feel free to explore these resources to elevate your security testing practices.</p>
