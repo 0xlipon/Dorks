@@ -1,4 +1,4 @@
-<b align="center"> Advanced Dorks for Hacking & Bug Bounty! </b>
+<b><p align="center"> Advanced Dorks for Hacking & Bug Bounty! </p></b>
 
 <p align="center">
     <a href="https://snowden-pc.github.io/google_dork_helper/" target="_blank">
