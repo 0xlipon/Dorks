@@ -21,4 +21,4 @@ This repository offers a collection of advanced Google Dorks to enhance your hac
 
 
 
-Feel free to explore these resources to elevate your security testing practices.
+<p align="center"> Feel free to explore these resources to elevate your security testing practices. </p>
