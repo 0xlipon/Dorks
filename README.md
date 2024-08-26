@@ -6,7 +6,7 @@ This repository contains a collection of advanced Google Dorks to assist with ha
 
 ### Quick Access
 
-- [Google Dork Helper](https://snowden-pc.github.io/google_dork_helper/): A tool for quickly accessing and utilizing Google Dorks to enhance your reconnaissance efforts.
+- [Google Dork Helper](https://snowden-pc.github.io/google_dork_helper/): Google Dorks to enhance your reconnaissance efforts.
 - [XSS Fuzzer](https://snowden-pc.github.io/xss_fuzzer/): A resource for testing and identifying Cross-Site Scripting (XSS) vulnerabilities.
 
 Feel free to explore these resources to improve your security testing practices.
