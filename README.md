@@ -1,5 +1,3 @@
-# Dorks
-
 ## Advanced Dorks for Hacking & Bug Bounty
 
 This repository offers a collection of advanced Google Dorks to enhance your hacking and bug bounty activities. Use these dorks to effectively identify vulnerabilities and gather valuable information.
