@@ -14,7 +14,3 @@
         <span style="font-size: 20px; font-weight: bold; color: #333;">XSS Fuzzer</span>
     </a>
 </p>
-
-
-
-### Feel free to explore these resources to elevate your security testing practices.
