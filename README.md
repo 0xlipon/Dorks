@@ -20,13 +20,3 @@ This repository offers a collection of advanced Google Dorks to enhance your hac
         <span style="font-size: 20px; font-weight: bold; color: #333;">XSS Fuzzer</span>
     </a>
 </p>
-
-### Animated Hover Effect
-
-<style>
-    a img:hover {
-        transform: scale(1.1);
-    }
-</style>
-
-Feel free to explore these resources to elevate your security testing practices.
