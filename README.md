@@ -1,9 +1,5 @@
 ## Advanced Dorks for Hacking & Bug Bounty
 
-This repository offers a collection of advanced Google Dorks to enhance your hacking and bug bounty activities. Use these dorks to effectively identify vulnerabilities and gather valuable information.
-
-### Quick Access
-
 <p align="center">
     <a href="https://snowden-pc.github.io/google_dork_helper/" target="_blank">
         <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt="Google Dork Helper" style="width: 80px; height: auto; transition: transform 0.3s ease;"/>
@@ -21,4 +17,4 @@ This repository offers a collection of advanced Google Dorks to enhance your hac
 
 
 
-<p align="center"> Feel free to explore these resources to elevate your security testing practices. </p>
+### Feel free to explore these resources to elevate your security testing practices.
