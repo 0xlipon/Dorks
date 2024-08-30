@@ -95,61 +95,71 @@
         <div id="urlListlist"></div>
     </div>
     <script>
-        const displayContainer = document.querySelector('#urlListlist');
-        let urls = [];
-        let currentIndex = 0;
+    const displayContainer = document.querySelector('#urlListlist');
+    let urls = [];
+    let currentIndex = 0;
 
-        function openNextUrl() {
-            if (currentIndex < urls.length) {
-                const newTab = window.open(urls[currentIndex], '_blank');
+    async function openNextUrl() {
+        if (currentIndex < urls.length) {
+            const url = urls[currentIndex];
+            const newTab = window.open(url, '_blank');
+            if (newTab) {
+                await waitForTabClose(newTab);
                 currentIndex++;
-                if (newTab) {
-                    const checkClosedInterval = setInterval(() => {
-                        if (newTab.closed) {
-                            clearInterval(checkClosedInterval);
-                            openNextUrl();
-                        }
-                    }, 500);
-                } else {
-                    console.log('Failed to open tab.');
-                }
+                openNextUrl(); // Proceed to the next URL
             } else {
-                console.log('All URLs have been opened.');
+                console.log('Failed to open tab.');
             }
+        } else {
+            console.log('All URLs have been opened.');
         }
+    }
 
-        function scannow() {
-            var scanbtn = document.querySelector('#urlInput').value;
-            fetch('https://raw.githubusercontent.com/coffinsp/payloads/main/xss.txt')
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then((data) => {
-                    const lines = data.split('\n');
-                    displayContainer.innerHTML = '';
-                    urls = [];
-                    currentIndex = 0;
-                    lines.forEach(line => {
-                        const result = `${scanbtn}${line}`;
-                        const listItem = document.createElement('p');
-                        const link = document.createElement('a');
-                        link.href = result;
-                        link.target = '_blank';
-                        link.innerText = result;
-                        link.style.color = '#00ff00'; // Set link color to green
-                        listItem.appendChild(link);
-                        displayContainer.appendChild(listItem);
-                        urls.push(result);
-                    });
-                    openNextUrl(); // Start opening URLs
-                })
-                .catch((error) => {
-                    displayContainer.innerText = 'There was an error fetching the data: ' + error.message;
+    function waitForTabClose(tab) {
+        return new Promise((resolve) => {
+            const checkClosed = () => {
+                if (tab.closed) {
+                    resolve(); // Resolve the promise when the tab is closed
+                } else {
+                    requestAnimationFrame(checkClosed); // Check again on the next animation frame
+                }
+            };
+            checkClosed();
+        });
+    }
+
+    function scannow() {
+        const scanbtn = document.querySelector('#urlInput').value;
+        fetch('https://raw.githubusercontent.com/coffinsp/payloads/main/xss.txt')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then((data) => {
+                const lines = data.split('\n');
+                displayContainer.innerHTML = '';
+                urls = [];
+                currentIndex = 0;
+                lines.forEach(line => {
+                    const result = `${scanbtn}${line}`;
+                    const listItem = document.createElement('p');
+                    const link = document.createElement('a');
+                    link.href = result;
+                    link.target = '_blank';
+                    link.innerText = result;
+                    link.style.color = '#00ff00'; // Set link color to green
+                    listItem.appendChild(link);
+                    displayContainer.appendChild(listItem);
+                    urls.push(result);
                 });
-        }
-    </script>
+                openNextUrl(); // Start opening URLs
+            })
+            .catch((error) => {
+                displayContainer.innerText = 'There was an error fetching the data: ' + error.message;
+            });
+    }
+</script>
 </body>
 </html>
