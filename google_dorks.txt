@@ -1,5 +1,3 @@
-Certainly! Here is the list of search dorks without numbers:
-
 intitle:index.of
 ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini
 ext:sql | ext:dbf | ext:mdb
