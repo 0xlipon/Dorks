@@ -1,3 +1,69 @@
+Certainly! Here is the list of search dorks without numbers:
+
+intitle:index.of
+ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini
+ext:sql | ext:dbf | ext:mdb
+ext:log
+ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup
+inurl:login
+intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"
+ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv
+ext:php intitle:phpinfo "published by the PHP Group"
+inurl:wp- | inurl:wp-content | inurl:plugins | inurl:uploads | inurl:themes | inurl:download
+inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor
+inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config
+inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http
+ext:action | ext:struts | ext:do
+site:pastebin.com [targetDomain]
+site:linkedin.com employees [targetDomain]
+inurl:"/phpinfo.php" | inurl:".htaccess" | inurl:"/.git" [targetDomain] -github
+site:*.[targetDomain]
+site:*.*.[targetDomain]
+inurl:wp-content | inurl:wp-includes [targetDomain]
+"*.[targetDomain]"
+http://[targetDomain]/crossdomain.xml
+http://threatcrowd.org/domain.php?domain=[targetDomain]
++inurl:[targetDomain] +ext:swf
+site:[targetDomain] mime:swf
+https://web.archive.org/cdx/search?url=[targetDomain]/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=urlkey:.*swf&limit=100000
+https://web.archive.org/cdx/search?url=[targetDomain]/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000
+https://web.archive.org/web/*/(.[targetDomain])
+https://web.archive.org/web/*/[targetDomain]/*
+https://crt.sh/?q=%25.[targetDomain]
+https://www.openbugbounty.org/search/?search=[targetDomain]&type=host
+https://www.reddit.com/search/?q=[targetDomain]&source=recent
++inurl:[targetDomain] +ext:wp- | +inurl:[targetDomain] +ext:wp-content
+https://censys.io/ipv4?q=[targetDomain]
+https://censys.io/domain?q=[targetDomain]
+https://censys.io/certificates?q=[targetDomain]
+https://www.shodan.io/search?query=[targetDomain]
+inurl:"/geoserver/ows?service=wfs"
+intext:"ArcGIS REST Services Directory" intitle:"Folder: /"
+inurl:/wp-content/uploads/wpo_wcpdf
+intitle:"index of "main.yml"
+inurl:/admin.aspx
+inurl:/wp-content/uploads/wpo_wcpdf
+inurl:uploadimage.php
+inurl:*/wp-content/plugins/contact-form-7/
+intitle:index.of conf.php
+intitle:"Sharing API Info"
+intitle:"Index of" inurl:/backup/ "admin.zip"
+intitle:"index of" github-api
+inurl:wp-content/uploads/wcpa_uploads
+inurl:user intitle:"Drupal" intext:"Log in" -"powered by"
+inurl: /libraries/joomla/database/
+inurl:"php?sql=select" ext:php
+inurl:"wp-content" intitle:"index.of" intext:wp-config.php
+intext:"index of" inurl:json-rpc
+intitle:"index of" "download.php?file="
+intext:"index of" inurl:jwks-rsa
+inurl:"wp-content" intitle:"index.of" intext:backup"
+intitle:index.of conf.mysql
+intitle:"index of" "users.yml" | "admin.yml" | "config.yml"
+intitle:"index of" "docker-compose.yml"
+intext:pom.xml intitle:"index of /"
+intext:"Index of" intext:"/etc"
+"sql" "parent" intitle:index.of -injection
 inurl:home/000~ROOT~000/
 intext:美拉克 伺服系統 整合通訊 / Unified Communications
 intext:Basado en tecnología IceWarp Comunicaciones Unificadas
