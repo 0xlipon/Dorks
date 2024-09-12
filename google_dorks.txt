@@ -12,29 +12,14 @@ inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.in
 inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config
 inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http
 ext:action | ext:struts | ext:do
-site:pastebin.com [targetDomain]
-site:linkedin.com employees [targetDomain]
+site:pastebin.com
+site:linkedin.com
 inurl:"/phpinfo.php" | inurl:".htaccess" | inurl:"/.git" [targetDomain] -github
-site:*.[targetDomain]
-site:*.*.[targetDomain]
 inurl:wp-content | inurl:wp-includes [targetDomain]
-"*.[targetDomain]"
-http://[targetDomain]/crossdomain.xml
-http://threatcrowd.org/domain.php?domain=[targetDomain]
-+inurl:[targetDomain] +ext:swf
-site:[targetDomain] mime:swf
-https://web.archive.org/cdx/search?url=[targetDomain]/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=urlkey:.*swf&limit=100000
-https://web.archive.org/cdx/search?url=[targetDomain]/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000
-https://web.archive.org/web/*/(.[targetDomain])
-https://web.archive.org/web/*/[targetDomain]/*
-https://crt.sh/?q=%25.[targetDomain]
-https://www.openbugbounty.org/search/?search=[targetDomain]&type=host
-https://www.reddit.com/search/?q=[targetDomain]&source=recent
-+inurl:[targetDomain] +ext:wp- | +inurl:[targetDomain] +ext:wp-content
-https://censys.io/ipv4?q=[targetDomain]
-https://censys.io/domain?q=[targetDomain]
-https://censys.io/certificates?q=[targetDomain]
-https://www.shodan.io/search?query=[targetDomain]
+/crossdomain.xml
++inurl: +ext:swf
+mime:swf
++inurl: +ext:wp- | +inurl:[targetDomain] +ext:wp-content
 inurl:"/geoserver/ows?service=wfs"
 intext:"ArcGIS REST Services Directory" intitle:"Folder: /"
 inurl:/wp-content/uploads/wpo_wcpdf
@@ -62,422 +47,6 @@ intitle:"index of" "docker-compose.yml"
 intext:pom.xml intitle:"index of /"
 intext:"Index of" intext:"/etc"
 "sql" "parent" intitle:index.of -injection
-inurl:home/000~ROOT~000/
-intext:美拉克 伺服系統 整合通訊 / Unified Communications
-intext:Basado en tecnología IceWarp Comunicaciones Unificadas
-intext:Basato su IceWarp Server
-intext:Tecnologia fornecida por IceWarp Server
-intext:Powered by IceWarp Czech RepublicIceWarp Mail server
-intext:Basato su Comunicazioni Integrate IceWarp
-inurl:webmail/old/?color=
-ext:php inurl:?
-admin account info" filetype:log
-!Host=*.* intext:enc_UserPassword=* ext:pcf
-"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" inurl:service.pwd
-"AutoCreate=TRUE password=*"
-"http://*:*@www" domainname
-"index of/" "ws_ftp.ini" "parent directory"
-"liveice configuration file" ext:cfg -site:sourceforge.net
-"parent directory" +proftpdpasswd
-Duclassified" -site:duware.com "DUware All Rights reserved"
-duclassmate" -site:duware.com
-Dudirectory" -site:duware.com
-dudownload" -site:duware.com
-Elite Forum Version *.*"
-Link Department"
-"sets mode: +k"
-"your password is" filetype:log
-DUpaypal" -site:duware.com
-allinurl: admin mdb
-auth_user_file.txt
-config.php
-eggdrop filetype:user user
-enable password | secret "current configuration" -intext:the
-etc (index.of)
-ext:asa | ext:bak intext:uid intext:pwd -"uid..pwd" database | server | dsn
-ext:inc "pwd=" "UID="
-ext:ini eudora.ini
-ext:ini Version=4.0.0.4 password
-ext:passwd -intext:the -sample -example
-ext:txt inurl:unattend.txt
-ext:yml database inurl:config
-filetype:bak createobject sa
-filetype:bak inurl:"htaccess|passwd|shadow|htusers"
-filetype:cfg mrtg "target
-filetype:cfm "cfapplication name" password
-filetype:conf oekakibbs
-filetype:conf slapd.conf
-filetype:config config intext:appSettings "User ID"
-filetype:dat "password.dat"
-filetype:dat inurl:Sites.dat
-filetype:dat wand.dat
-filetype:inc dbconn
-filetype:inc intext:mysql_connect
-filetype:inc mysql_connect OR mysql_pconnect
-filetype:inf sysprep
-filetype:ini inurl:"serv-u.ini"
-filetype:ini inurl:flashFXP.ini
-filetype:ini ServUDaemon
-filetype:ini wcx_ftp
-filetype:ini ws_ftp pwd
-filetype:ldb admin
-filetype:log "See `ipsec --copyright"
-filetype:log inurl:"password.log"
-filetype:mdb inurl:users.mdb
-filetype:mdb wwforum
-filetype:netrc password
-filetype:pass pass intext:userid
-filetype:pem intext:private
-filetype:properties inurl:db intext:password
-filetype:pwd service
-filetype:pwl pwl
-filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"
-filetype:reg reg +intext:Ã¢? WINVNC3Ã¢?
-filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS
-filetype:sql "insert into" (pass|passwd|password)
-filetype:sql ("values * MD5" | "values * password" | "values * encrypt")
-filetype:sql +"IDENTIFIED BY" -cvs
-filetype:sql password
-filetype:url +inurl:"ftp://" +inurl:";@"
-filetype:xls username password email
-htpasswd
-htpasswd / htgroup
-htpasswd / htpasswd.bak
-intext:"enable password 7"
-intext:"enable secret 5 $"
-intext:"EZGuestbook"
-intext:"Web Wiz Journal"
-intitle:"index of" intext:connect.inc
-intitle:"index of" intext:globals.inc
-intitle:"Index of" passwords modified
-intitle:"Index of" sc_serv.conf sc_serv content
-intitle:"phpinfo()" +"mysql.default_password" +"Zend s?ri?ting Language Engine"
-intitle:dupics inurl:(add.asp | default.asp | view.asp | voting.asp) -site:duware.com
-intitle:index.of administrators.pwd
-intitle:Index.of etc shadow
-intitle:index.of intext:"secring.skr"|"secring.pgp"|"secring.bak"
-intitle:rapidshare intext:login
-inurl:"calendars?ri?t/users.txt"
-inurl:"editor/list.asp" | inurl:"database_editor.asp" | inurl:"login.asa" "are set"
-inurl:"GRC.DAT" intext:"password"
-inurl:"Sites.dat"+"PASS="
-inurl:"slapd.conf" intext:"credentials" -manpage -"Manual Page" -man: -sample
-inurl:"slapd.conf" intext:"rootpw" -manpage -"Manual Page" -man: -sample
-inurl:"wvdial.conf" intext:"password"
-inurl:/db/main.mdb
-inurl:/wwwboard
-inurl:/yabb/Members/Admin.dat
-inurl:ccbill filetype:log
-inurl:cgi-bin inurl:calendar.cfg
-inurl:chap-secrets -cvs
-inurl:config.php dbuname dbpass
-inurl:filezilla.xml -cvs
-inurl:lilo.conf filetype:conf password -tatercounter2000 -bootpwd -man
-inurl:nuke filetype:sql
-inurl:ospfd.conf intext:password -sample -test -tutorial -download
-inurl:pap-secrets -cvs
-inurl:pass.dat
-inurl:perform filetype:ini
-inurl:perform.ini filetype:ini
-inurl:secring ext:skr | ext:pgp | ext:bak
-inurl:server.cfg rcon password
-inurl:ventrilo_srv.ini adminpassword
-inurl:vtund.conf intext:pass -cvs
-inurl:zebra.conf intext:password -sample -test -tutorial -download
-LeapFTP intitle:"index.of./" sites.ini modified
-master.passwd
-mysql history files
-NickServ registration passwords
-passlist
-passlist.txt (a better way)
-passwd
-passwd / etc (reliable)
-people.lst
-psyBNC config files
-pwd.db
-server-dbs "intitle:index of"
-signin filetype:url
-spwd.db / passwd
-trillian.ini
-wwwboard WebAdmin inurl:passwd.txt wwwboard|webadmin
-[WFClient] Password= filetype:ica
-intitle:"remote assessment" OpenAanval Console
-intitle:opengroupware.org "resistance is obsolete" "Report Bugs" "Username" "password"
-"bp blog admin" intitle:login | intitle:admin -site:johnny.ihackstuff.com
-"Emergisoft web applications are a part of our"
-"Establishing a secure Integrated Lights Out session with" OR intitle:"Data Frame - Browser not HTTP 1.1 compatible" OR intitle:"HP Integrated Lights-
-"HostingAccelerator" intitle:"login" +"Username" -"news" -demo
-"iCONECT 4.1 :: Login"
-"IMail Server Web Messaging" intitle:login
-"inspanel" intitle:"login" -"cannot" "Login ID" -site:inspediumsoft.com
-"intitle:3300 Integrated Communications Platform" inurl:main.htm
-"Login - Sun Cobalt RaQ"
-"login prompt" inurl:GM.cgi
-"Login to Usermin" inurl:20000
-"Microsoft CRM : Unsupported Browser Version"
-"OPENSRS Domain Management" inurl:manage.cgi
-"pcANYWHERE EXPRESS Java Client"
-"Please authenticate yourself to get access to the management interface"
-"please log in"
-"Please login with admin pass" -"leak" -sourceforge
-CuteNews" "2003..2005 CutePHP"
-DWMail" password intitle:dwmail
-Merak Mail Server Software" -.gov -.mil -.edu -site:merakmailserver.com
-Midmart Messageboard" "Administrator Login"
-Monster Top List" MTL numrange:200-
-UebiMiau" -site:sourceforge.net
-"site info for" "Enter Admin Password"
-"SquirrelMail version" "By the SquirrelMail development Team"
-"SysCP - login"
-"This is a restricted Access Server" "Javas?ri?t Not Enabled!"|"Messenger Express" -edu -ac
-"This section is for Administrators only. If you are an administrator then please"
-"ttawlogin.cgi/?action="
-"VHCS Pro ver" -demo
-"VNC Desktop" inurl:5800
-"Web-Based Management" "Please input password to login" -inurl:johnny.ihackstuff.com
-"WebExplorer Server - Login" "Welcome to WebExplorer Server"
-"WebSTAR Mail - Please Log In"
-"You have requested access to a restricted area of our website. Please authenticate yourself to continue."
-"You have requested to access the management functions" -.edu
-(intitle:"Please login - Forums
-UBB.threads")|(inurl:login.php "ubb")
-(intitle:"Please login - Forums
-WWWThreads")|(inurl:"wwwthreads/login.php")|(inurl:"wwwthreads/login.pl?Cat=")
-(intitle:"rymo Login")|(intext:"Welcome to rymo") -family
-(intitle:"WmSC e-Cart Administration")|(intitle:"WebMyStyle e-Cart Administration")
-(inurl:"ars/cgi-bin/arweb?O=0" | inurl:arweb.jsp) -site:remedy.com -site:mil
-4images Administration Control Panel
-allintitle:"Welcome to the Cyclades"
-allinurl:"exchange/logon.asp"
-allinurl:wps/portal/ login
-ASP.login_aspx "ASP.NET_SessionId"
-CGI:IRC Login
-ext:cgi intitle:"control panel" "enter your owner password to continue!"
-ez Publish administration
-filetype:php inurl:"webeditor.php"
-filetype:pl "Download: SuSE Linux Openexchange Server CA"
-filetype:r2w r2w
-intext:""BiTBOARD v2.0" BiTSHiFTERS Bulletin Board"
-intext:"Fill out the form below completely to change your password and user name. If new username is left blank, your old one will be assumed." -edu
-intext:"Mail admins login here to administrate your domain."
-intext:"Master Account" "Domain Name" "Password" inurl:/cgi-bin/qmailadmin
-intext:"Master Account" "Domain Name" "Password" inurl:/cgi-bin/qmailadmin
-intext:"Storage Management Server for" intitle:"Server Administration"
-intext:"Welcome to" inurl:"cp" intitle:"H-SPHERE" inurl:"begin.html" -Fee
-intext:"vbulletin" inurl:admincp
-intitle:"*- HP WBEM Login" | "You are being prompted to provide login account information for *" | "Please provide the information requested and press
-intitle:"Admin Login" "admin login" "blogware"
-intitle:"Admin login" "Web Site Administration" "Copyright"
-intitle:"AlternC Desktop"
-intitle:"Athens Authentication Point"
-intitle:"b2evo > Login form" "Login form. You must log in! You will have to accept cookies in order to log in" -demo -site:b2evolution.net
-intitle:"Cisco CallManager User Options Log On" "Please enter your User ID and Password in the spaces provided below and click the Log On button to co
-intitle:"ColdFusion Administrator Login"
-intitle:"communigate pro * *" intitle:"entrance"
-intitle:"Content Management System" "user name"|"password"|"admin" "Microsoft IE 5.5" -mambo
-intitle:"Content Management System" "user name"|"password"|"admin" "Microsoft IE 5.5" -mambo
-intitle:"Dell Remote Access Controller"
-intitle:"Docutek ERes - Admin Login" -edu
-intitle:"Employee Intranet Login"
-intitle:"eMule *" intitle:"- Web Control Panel" intext:"Web Control Panel" "Enter your password here."
-intitle:"ePowerSwitch Login"
-intitle:"eXist Database Administration" -demo
-intitle:"EXTRANET * - Identification"
-intitle:"EXTRANET login" -.edu -.mil -.gov
-intitle:"EZPartner" -netpond
-intitle:"Flash Operator Panel" -ext:php -wiki -cms -inurl:asternic -inurl:sip -intitle:ANNOUNCE -inurl:lists
-intitle:"i-secure v1.1" -edu
-intitle:"Icecast Administration Admin Page"
-intitle:"iDevAffiliate - admin" -demo
-intitle:"ISPMan : Unauthorized Access prohibited"
-intitle:"ITS System Information" "Please log on to the SAP System"
-intitle:"Kurant Corporation StoreSense" filetype:bok
-intitle:"ListMail Login" admin -demo
-intitle:"Login -
-Easy File Sharing Web Server"
-intitle:"Login Forum
-AnyBoard" intitle:"If you are a new user:" intext:"Forum
-AnyBoard" inurl:gochat -edu
-intitle:"Login to @Mail" (ext:pl | inurl:"index") -dwaffleman
-intitle:"Login to Cacti"
-intitle:"Login to the forums - @www.aimoo.com" inurl:login.cfm?id=
-intitle:"MailMan Login"
-intitle:"Member Login" "NOTE: Your browser must have cookies enabled in order to log into the site." ext:php OR ext:cgi
-intitle:"Merak Mail Server Web Administration" -ihackstuff.com
-intitle:"microsoft certificate services" inurl:certsrv
-intitle:"MikroTik RouterOS Managing Webpage"
-intitle:"MX Control Console" "If you can't remember"
-intitle:"Novell Web Services" "GroupWise" -inurl:"doc/11924" -.mil -.edu -.gov -filetype:pdf
-intitle:"Novell Web Services" intext:"Select a service and a language."
-intitle:"oMail-admin Administration - Login" -inurl:omnis.ch
-intitle:"OnLine Recruitment Program - Login"
-intitle:"Philex 0.2*" -s?ri?t -site:freelists.org
-intitle:"PHP Advanced Transfer" inurl:"login.php"
-intitle:"php icalendar administration" -site:sourceforge.net
-intitle:"php icalendar administration" -site:sourceforge.net
-intitle:"phpPgAdmin - Login" Language
-intitle:"PHProjekt - login" login password
-intitle:"please login" "your password is *"
-intitle:"Remote Desktop Web Connection" inurl:tsweb
-intitle:"SFXAdmin - sfx_global" | intitle:"SFXAdmin - sfx_local" | intitle:"SFXAdmin - sfx_test"
-intitle:"SHOUTcast Administrator" inurl:admin.cgi
-intitle:"site administration: please log in" "site designed by emarketsouth"
-intitle:"Supero Doctor III" -inurl:supermicro
-intitle:"SuSE Linux Openexchange Server" "Please activate Javas?ri?t!"
-intitle:"teamspeak server-administration
-intitle:"Tomcat Server Administration"
-intitle:"TOPdesk ApplicationServer"
-intitle:"TUTOS Login"
-intitle:"TWIG Login"
-intitle:"vhost" intext:"vHost . 2000-2004"
-intitle:"Virtual Server Administration System"
-intitle:"VisNetic WebMail" inurl:"/mail/"
-intitle:"VitalQIP IP Management System"
-intitle:"VMware Management Interface:" inurl:"vmware/en/"
-intitle:"VNC viewer for Java"
-intitle:"web-cyradm"|"by Luc de Louw" "This is only for authorized users" -tar.gz -site:web-cyradm.org
-intitle:"WebLogic Server" intitle:"Console Login" inurl:console
-intitle:"Welcome Site/User Administrator" "Please select the language" -demos
-intitle:"Welcome to Mailtraq WebMail"
-intitle:"welcome to netware *" -site:novell.com
-intitle:"WorldClient" intext:"? (2003|2004) Alt-N Technologies."
-intitle:"xams 0.0.0..15 - Login"
-intitle:"XcAuctionLite" | "DRIVEN BY XCENT" Lite inurl:admin
-intitle:"XMail Web Administration Interface" intext:Login intext:password
-intitle:"Zope Help System" inurl:HelpSys
-intitle:"ZyXEL Prestige Router" "Enter password"
-intitle:"inc. vpn 3000 concentrator"
-intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
-intitle:asterisk.management.portal web-access
-intitle:endymion.sak?.mail.login.page | inurl:sake.servlet
-intitle:Group-Office "Enter your username and password to login"
-intitle:ilohamail "
-IlohaMail"
-intitle:ilohamail intext:"Version 0.8.10" "
-IlohaMail"
-intitle:IMP inurl:imp/index.php3
-intitle:Login * Webmailer
-intitle:Login intext:"RT is ? Copyright"
-intitle:Node.List Win32.Version.3.11
-intitle:Novell intitle:WebAccess "Copyright *-* Novell, Inc"
-intitle:open-xchange inurl:login.pl
-intitle:Ovislink inurl:private/login
-intitle:phpnews.login
-intitle:plesk inurl:login.php3
-inurl:"/admin/configuration. php?" Mystore
-inurl:"/slxweb.dll/external?name=(custportal|webticketcust)"
-inurl:"1220/parse_xml.cgi?"
-inurl:"631/admin" (inurl:"op=*") | (intitle:CUPS)
-inurl:":10000" intext:webmin
-inurl:"Activex/default.htm" "Demo"
-inurl:"calendar.asp?action=login"
-inurl:"default/login.php" intitle:"kerio"
-inurl:"gs/adminlogin.aspx"
-inurl:"php121login.php"
-inurl:"suse/login.pl"
-inurl:"typo3/index.php?u=" -demo
-inurl:"usysinfo?login=true"
-inurl:"utilities/TreeView.asp"
-inurl:"vsadmin/login" | inurl:"vsadmin/admin" inurl:.php|.asp
-inurl:/admin/login.asp
-inurl:/cgi-bin/sqwebmail?noframes=1
-inurl:/Citrix/Nfuse17/
-inurl:/dana-na/auth/welcome.html
-inurl:/eprise/
-inurl:/Merchant2/admin.mv | inurl:/Merchant2/admin.mvc | intitle:"Miva Merchant Administration Login" -inurl:cheap-malboro.net
-inurl:/modcp/ intext:Moderator+vBulletin
-inurl:/SUSAdmin intitle:"Microsoft Software upd?t? Services"
-inurl:/webedit.* intext:WebEdit Professional -html
-inurl:1810 "Oracle Enterprise Manager"
-inurl:2000 intitle:RemotelyAnywhere -site:realvnc.com
-inurl::2082/frontend -demo
-inurl:administrator "welcome to mambo"
-inurl:bin.welcome.sh | inurl:bin.welcome.bat | intitle:eHealth.5.0
-inurl:cgi-bin/ultimatebb.cgi?ubb=login
-inurl:Citrix/MetaFrame/default/default.aspx
-inurl:confixx inurl:login|anmeldung
-inurl:coranto.cgi intitle:Login (Authorized Users Only)
-inurl:csCreatePro.cgi
-inurl:default.asp intitle:"WebCommander"
-inurl:exchweb/bin/auth/owalogon.asp
-inurl:gnatsweb.pl
-inurl:ids5web
-inurl:irc filetype:cgi cgi:irc
-inurl:login filetype:swf swf
-inurl:login.asp
-inurl:login.cfm
-inurl:login.php "SquirrelMail version"
-inurl:metaframexp/default/login.asp | intitle:"Metaframe XP Login"
-inurl:mewebmail
-inurl:names.nsf?opendatabase
-inurl:ocw_login_username
-inurl:orasso.wwsso_app_admin.ls_login
-inurl:postfixadmin intitle:"postfix admin" ext:php
-inurl:search/admin.php
-inurl:textpattern/index.php
-inurl:WCP_USER
-inurl:webmail./index.pl "Interface"
-inurl:webvpn.html "login" "Please enter your"
-Login ("
-Jetbox One CMS Ã¢?Â¢" | "
-Jetstream ? *")
-Novell NetWare intext:"netware management portal version"
-Outlook Web Access (a better way)
-PhotoPost PHP Upload
-PHPhotoalbum Statistics
-PHPhotoalbum Upload
-phpWebMail
-Please enter a valid password! inurl:polladmin
-
-INDEXU
-Ultima Online loginservers
-W-Nailer Upload Area
-intitle:"DocuShare" inurl:"docushare/dsweb/" -faq -gov -edu
-"#mysql dump" filetype:sql
-"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3
-"allow_call_time_pass_reference" "PATH_INFO"
-"Certificate Practice Statement" inurl:(PDF | DOC)
-"Generated by phpSystem"
-"generated by wwwstat"
-"Host Vulnerability Summary Report"
-"HTTP_FROM=googlebot" googlebot.com "Server_Software="
-"Index of" / "chat/logs"
-"Installed Objects Scanner" inurl:default.asp
-"MacHTTP" filetype:log inurl:machttp.log
-"Mecury Version" "Infastructure Group"
-"Microsoft (R) Windows * (TM) Version * DrWtsn32 Copyright (C)" ext:log
-"Most Submitted Forms and s?ri?ts" "this section"
-"Network Vulnerability Assessment Report"
-"not for distribution" confidential
-"not for public release" -.edu -.gov -.mil
-"phone * * *" "address *" "e-mail" intitle:"curriculum vitae"
-"phpMyAdmin" "running on" inurl:"main.php"
-"produced by getstats"
-"Request Details" "Control Tree" "Server Variables"
-"robots.txt" "Disallow:" filetype:txt
-"Running in Child mode"
-"sets mode: +p"
-"sets mode: +s"
-"Thank you for your order" +receipt
-"This is a Shareaza Node"
-"This report was generated by WebLog"
-( filetype:mail | filetype:eml | filetype:mbox | filetype:mbx ) intext:password|subject
-(intitle:"PRTG Traffic Grapher" inurl:"allsensors")|(intitle:"PRTG Traffic Grapher - Monitoring Results")
-(intitle:WebStatistica inurl:main.php) | (intitle:"WebSTATISTICA server") -inurl:statsoft -inurl:statsoftsa -inurl:statsoftinc.com -edu -software -rob
-(inurl:"robot.txt" | inurl:"robots.txt" ) intext:disallow filetype:txt
-+":8080" +":3128" +":80" filetype:txt
-+"HSTSNR" -"netop.com"
--site:php.net -"The PHP Group" inurl:source inurl:url ext:pHp
-94FBR "ADOBE PHOTOSHOP"
-AIM buddy lists
-allinurl:/examples/jsp/snp/snoop.jsp
-allinurl:cdkey.txt
-allinurl:servlet/SnoopServlet
-cgiirc.conf
-cgiirc.conf
-contacts ext:wml
-data filetype:mdb -site:gov -site:mil
-exported email addresses
 ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | intext:"budget approved") inurl:confidential
 ext:asp inurl:pathto.asp
 ext:ccm ccm -catacomb
@@ -1004,6 +573,1526 @@ intitle:"index of" pwd.db
 intitle:"index of" spwd
 intitle:"index of" user_carts OR user_cart
 intitle:"index.of \*" admin news.asp configview.asp
+video.php?content=
+video.php?id=
+view_author.php?id=
+view_cart.php?title=
+view_detail.php?ID=
+view_faq.php?id=
+view_item.php?id=
+view_item.php?item=
+view_items.php?id=
+view_newsletter.php?id=
+view_product.php?id=
+view-event.php?id=
+view.php?*[*]*=
+view.php?adresa=
+view.php?b=
+view.php?body=
+view.php?channel=
+view.php?chapter=
+view.php?choix=
+view.php?cid=
+view.php?cmd=
+view.php?content=
+view.php?disp=
+view.php?get=
+view.php?go=
+view.php?goFile=
+view.php?goto=
+view.php?header=
+view.php?id=
+view.php?incl=
+view.php?ir=
+view.php?ki=
+view.php?lang=
+view.php?load=
+view.php?loader=
+view.php?mid=
+view.php?middle=
+view.php?mod=
+view.php?oldal=
+view.php?option=
+view.php?pag=
+view.php?page=
+view.php?pageNum_rscomp=
+view.php?panel=
+view.php?pg=
+view.php?phpbb_root_path=
+view.php?pollname=
+view.php?pr=
+view.php?qry=
+view.php?recipe=
+view.php?redirect=
+view.php?sec=
+view.php?secao=
+view.php?seccion=
+view.php?second=
+view.php?seite=
+view.php?showpage=
+view.php?sp=
+view.php?str=
+view.php?to=
+view.php?type=
+view.php?u=
+view.php?var=
+view.php?where=
+view/7/9628/1.html?reply=
+viewapp.php?id=
+viewcart.php?CartId=
+viewCart.php?userID=
+viewCat_h.php?idCategory=
+viewevent.php?EventID=
+viewitem.php?recor=
+viewphoto.php?id=
+viewPrd.php?idcategory=
+ViewProduct.php?misc=
+viewshowdetail.php?id=
+viewthread.php?tid=
+voteList.php?item_ID=
+wamp_dir/setup/yesno.phtml?no_url=
+warning "error on line" php sablotron
+WebLog Referrers
+website.php?id=
+Welcome to ntop!
+whatsnew.php?idCategory=
+wiki/pmwiki.php?page****=
+Windows 2000 web server error messages
+WsAncillary.php?ID=
+WsPages.php?ID=noticiasDetalle.php?xid=
+www/index.php?page=
+wwwboard WebAdmin inurl:passwd.txt wwwboard|webadmin
+WWWThreads")|(inurl:"wwwthreads/login.php")|(inurl:"wwwthreads/login.pl?Cat=")
+XOOPS Custom Installation
+yacht_search/yacht_view.php?pid=
+YZboard/view.php?id=
+zb/view.php?uid=
+zentrack/index.php?configFile=
+site:accounts..com/signin/ intitle:"index of" drupal intitle:"index of" admin inurl:login.cgi    Pages Containing Login Portals site:/joomla/administrator
+inurl:/login/index.jsp -site:hertz.*
+intitle:"Index of" inurl:wp-json/oembed    
+intitle:"Index of" phpmyadmin
+intitle:"Index of" wp-admin
+intitle:index.of.?.sql
+inurl: /filemanager/dialog.php
+s3 site:amazonaws.com filetype:log
+inurl:cgi/login.pl
+inurl:zoom.us/j and intext:scheduled for
+site:*/auth intitle:login
+nurl: admin/login.aspx    Pages Containing Login Portals
+"Index of" inurl:webalizer
+"Index of" inurl:phpmyadmin
+"Index of" inurl:htdocs inurl:xampp
+s3 site:amazonaws.com intext:dhcp filetype:txt inurl:apollo
+inurl:/index.aspx/login
+site:amazonaws.com inurl:login.php
+intitle:"IIS Windows Server" -inurl:"IIS Windows Server"
+intitle:"Apache2 Ubuntu Default Page: It works"    
+inurl:/filedown.php?file=
+inurl:Dashboard.jspa intext:"Atlassian Jira Project Management Software"
+inurl:app/kibana intext:Loading Kibana
+site:https://docs.google.com/spreadsheets edit
+inurl:8443 AND -intitle:8443 AND -intext:8443 prohibited|restricted|unauthorized
+intitle:"index of" unattend.xml
+inurl:/admin/index.php
+inurl:bc.googleusercontent.com intitle:index of
+inurl:office365 AND intitle:"Sign In | Login | Portal"
+intext:"@gmail.com" AND intext:"@yahoo.com" filetype:sql
+intitle:OmniDB intext:"user. pwd. Sign in."
+intitle:"qBittorrent Web UI" inurl:8080
+site:com inurl:jboss filetype:log -github.com
+intitle:"index of" ".cpanel/caches/config/"
+inurl:'/scopia/entry/index.jsp'
+inurl:/index.aspx/login
+intitle: "index of" "./" "./bitcoin"
+inurl:/portal/apis/fileExplorer/
+intitle:"index of" "/aws.s3/"
+intitle:"index of" hosts.csv | firewalls.csv | linux.csv | windows.csv
+intitle:Test Page for the Nginx HTTP Server on Fedora
+inurl:_cpanel/forgotpwd
+intitle:"index of /" intext:/backup
+intitle:"Swagger UI - " + "Show/Hide"
+site:drive.google.com /preview intext:movie inurl:flv | wmv | mp4 -pdf -edit -view
+intext:"class JConfig {" inurl:configuration.php
+"index of" "database.sql.zip"
+inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure
+inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo
+ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute”
+inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:&
+inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de
+site:groups.google.com
+site:s3.amazonaws.com
+site:blob.core.windows.net
+site:googleapis.com
+site:drive.google.com
+site:dev.azure.com
+site:onedrive.live.com
+site:digitaloceanspaces.com
+site:sharepoint.com
+intext:"error_reporting(E_ALL)" intitle:"phpinfo()" -github.com
+intext:"sql_query" inurl:"admin.php" -github.com
+inurl:"config.inc.php" OR inurl:"config/config.ini.php" OR inurl:"config/config.php" -github.com
+intitle:"index of" intext:"wp-config.php" -github.com
+inurl:"upload.php" intext:"File Upload" -github.com
+inurl:"error_log" intext:"PHP Error logs" -github.com
+inurl:"login.php" intext:"Login Page" -github.com
+inurl:"login.html" intext:"Admin Login" -github.com
+intext:"API_KEY" -github.com
+inurl:"api/v1" -github.com
+inurl:"swagger.json" -github.com
+inurl:"/graphql" -github.com
+inurl:"/api-docs" -github.com
+inurl:"/api/v2" -github.com
+inurl:"/api/v3" -github.com
+intext:"-----BEGIN PRIVATE KEY-----" -github.com
+intext:"client_secret" -github.com
+intext:"password" filetype:env -github.com
+intext:"apikey" filetype:env -github.com
+intext:"username" filetype:env -github.com
+intext:"jdbc.password" -github.com
+intext:"oauth.token" -github.com
+inurl:download.php?file=
+intitle:"Index of /" inurl:download.php
+intitle:"Download" inurl:download.php
+intitle:"Download File" inurl:download.php
+intitle:"File Download" inurl:download.php
+intitle:"Download Page" inurl:download.php
+intitle:"Download Link" inurl:download.php
+intitle:"Download Resource" inurl:download.php
+intitle:"Download Center" inurl:download.php
+intitle:"Download Manager" inurl:download.php
+intitle:"Download Script" inurl:download.php
+intitle:"File URL" inurl:download.php
+intitle:"File Path" inurl:download.php
+intitle:"Direct Download" inurl:download.php
+intitle:"Downloadable File" inurl:download.php
+intitle:"File Repository" inurl:download.php
+intitle:"File Hosting" inurl:download.php
+intitle:"File Distribution" inurl:download.php
+intitle:"Downloadable Resource" inurl:download.php
+inurl:download.php?file=
+inurl:download.php?name=
+inurl:download.php?filename=
+inurl:download.php?download=
+inurl:download.php?file_id=
+inurl:download.php?file_name=
+inurl:download.php?filepath=
+inurl:download.php?resource=
+inurl:download.php?item=
+inurl:download.php?attachment=
+inurl:download.php?doc=
+inurl:download.php?type=
+inurl:download.php?link=
+inurl:download.php?url=
+inurl:download.php?target=
+inurl:download.php?source=
+inurl:download.php?content=
+inurl:download.php?document=
+inurl:download.php?data=
+inurl:download.php?product=
+inurl:download.php?code=
+inurl:download.php?key=
+inurl:download.php?source_file=
+inurl:download.php?output=
+inurl:download.php?resource_path=
+inurl:download.php?target_file=
+inurl:download.php?resource_url=
+inurl:download.php?file_path=
+inurl:download.php?file_url=
+inurl:download.php?attachment_id=
+inurl:download.php?file_location=
+inurl:download.php?file_path=
+inurl:"/downloads/download.php?file="
+inurl:"/files/download.php?name="
+inurl:"/file/download.php?filename="
+inurl:"/dl/download.php?file="
+inurl:"/dl/download.php?name="
+inurl:"/dl/download.php?filename="
+inurl:"/getfile/download.php?file="
+inurl:"/getfile/download.php?name="
+inurl:"/getfile/download.php?filename="
+inurl:"/download-files/download.php?file="
+inurl:"/download-files/download.php?name="
+inurl:"/download-files/download.php?filename="
+inurl:"/download-resource/download.php?file="
+inurl:"/download-resource/download.php?name="
+inurl:"/download-resource/download.php?filename="
+inurl:"/file-download/download.php?file="
+inurl:"/file-download/download.php?name="
+inurl:"/file-download/download.php?filename="
+inurl:"/content-download/download.php?file="
+inurl:"/content-download/download.php?name="
+inurl:"/content-download/download.php?filename="
+inurl:"/resource-download/download.php?file="
+inurl:"/resource-download/download.php?name="
+inurl:"/resource-download/download.php?filename="
+inurl:"/download-link/download.php?url="
+inurl:"/download-link/download.php?link="
+inurl:"/download-link/download.php?source="
+inurl:"/download-link/download.php?content="
+inurl:"/download-link/download.php?document="
+intitle:"index of" "backup" -github.com
+intitle:"index of" "backups" -github.com
+inurl:"/backup/" -github.com
+inurl:"/backup" -github.com
+intext:"backup.sql" -github.com
+intext:"backup.zip" -github.com
+inurl:"/backup" filetype:zip -github.com
+intitle:"Login" inurl:"admin" -github.com
+intitle:"Sign In" inurl:"admin" -github.com
+intitle:"Member Login" -github.com
+intitle:"User Login" -github.com
+intitle:"Staff Login" -github.com
+inurl:index.php?id=
+inurl:article.php?id=
+inurl:gallery.php?id=
+inurl:news.php?id=
+inurl:product.php?id=
+inurl:category.php?id=
+inurl:content.php?id=
+inurl:download.php?id=
+inurl:profile.php?id=
+inurl:shop.php?id=
+inurl:show.php?id=
+inurl:item.php?id=
+inurl:review.php?id=
+inurl:read.php?id=
+inurl:faq.php?id=
+inurl:search.php?id=
+inurl:archive.php?id=
+inurl:event.php?id=
+inurl:calendar.php?id=
+inurl:login.php?id=
+inurl:register.php?id=
+inurl:checkout.php?id=
+inurl:confirm.php?id=
+inurl:process.php?id=
+filetype:php intext:"SQL syntax"
+filetype:asp inurl:"id=" intext:"OleDbException"
+filetype:log intext:"You have an error in your SQL syntax"
+inurl:".php?param="
+inurl:".php?id="
+inurl:"page.php?id="
+inurl:"product-detail.php?id="
+inurl:"viewitem.php?id="
+inurl:"news_detail.php?id="
+inurl:"post.php?id="
+inurl:"event.php?id="
+inurl:"category.php?id="
+inurl:"download.php?id="
+inurl:"content.php?id="
+inurl:"index.php?id="
+inurl:"gallery.php?id="
+inurl:"news.php?id="
+inurl:"product.php?id="
+inurl:"category.php?id="
+inurl:"content.php?id="
+inurl:"download.php?id="
+inurl:"profile.php?id="
+inurl:"shop.php?id="
+inurl:"show.php?id="
+inurl:"item.php?id="
+inurl:"review.php?id="
+inurl:"read.php?id="
+inurl:"faq.php?id="
+inurl:"search.php?id="
+inurl:"archive.php?id="
+inurl:"event.php?id="
+inurl:"calendar.php?id="
+inurl:"login.php?id="
+inurl:"register.php?id="
+inurl:"checkout.php?id="
+inurl:"confirm.php?id="
+inurl:"process.php?id="
+inurl:*.php?*
+inurl:*.asp?*
+inurl:*.aspx?*
+inurl:*.jsp?*
+filetype:asp "OleDbException"
+filetype:log "SQL syntax"
+filetype:txt "SQL syntax error"
+filetype:txt "union select"
+filetype:log "union select"
+filetype:txt "mysqli_num_rows()"
+filetype:log "mysql_fetch_array()"
+filetype:txt "ORDER BY"
+filetype:log "ORDER BY"
+inurl:".php?category_id="
+inurl:".php?product_id="
+inurl:".php?article_id="
+inurl:".php?post_id="
+inurl:".php?event_id="
+inurl:".php?calendar_id="
+inurl:".php?news_id="
+inurl:".php?item_id="
+inurl:".php?id="
+intext:"You have an error in your SQL syntax near"
+intext:"SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near"
+intext:"query failed: ERROR: parser: parse error"
+inurl:"login.php?username="
+inurl:"login.aspx?user="
+inurl:"signin.php?user="
+inurl:"auth.php?user="
+inurl:"signin.asp?user="
+inurl:"login.jsp?user="
+inurl:"search.php?query="
+inurl:"search.aspx?keyword="
+inurl:"search.asp?q="
+inurl:"search.jsp?query="
+inurl:"profile.php?user_id="
+inurl:"profile.aspx?userid="
+inurl:"user.php?id="
+inurl:"user.aspx?user_id="
+inurl:"product.php?pid="
+inurl:"product.aspx?id="
+inurl:"item.php?item_id="
+inurl:"item.aspx?prodid="
+inurl:"forum.php?topic="
+inurl:"forum.aspx?topic_id="
+inurl:"thread.php?tid="
+inurl:"thread.aspx?threadid="
+inurl:"news.php?nid="
+inurl:"news.aspx?newsid="
+inurl:"article.php?article_id="
+inurl:"article.aspx?id="
+inurl:"category.php?cat_id="
+inurl:"category.aspx?id="
+inurl:"blog.php?post_id="
+inurl:"blog.aspx?id="
+inurl:"register.php?user="
+inurl:"register.aspx?username="
+inurl:"signup.php?username="
+inurl:"forgot_password.php?email="
+inurl:"forgotpassword.aspx?email="
+inurl:"contact.php?name="
+inurl:"contact.aspx?fullname="
+inurl:"feedback.php?message="
+inurl:"feedback.aspx?msg="
+inurl:"survey.php?survey_id="
+inurl:"survey.aspx?id="
+inurl:"poll.php?id="
+inurl:"poll.aspx?pollid="
+inurl:"comments.php?post_id="
+inurl:"comments.aspx?postid="
+inurl:"cms.php?page_id="
+inurl:"cms.aspx?id="
+inurl:"checkout.php?order_id="
+inurl:/search?query=<script>alert('XSS')</script>
+inurl:/login?username=<script>alert('XSS')</script>
+inurl:/signin?email=<script>alert('XSS')</script>
+inurl:/register?fullname=<script>alert('XSS')</script>
+inurl:/contact?message=<script>alert('XSS')</script>
+inurl:/comment?text=<script>alert('XSS')</script>
+inurl:/feedback?subject=<script>alert('XSS')</script>
+inurl:/guestbook?message=<script>alert('XSS')</script>
+inurl:/feedback?comment=<script>alert('XSS')</script>
+inurl:/post?body=<script>alert('XSS')</script>
+inurl:/search?q=<script>alert('XSS')</script>
+inurl:/profile?username=<script>alert('XSS')</script>
+inurl:/user?name=<script>alert('XSS')</script>
+inurl:/about?content=<script>alert('XSS')</script>
+inurl:/portfolio?project=<script>alert('XSS')</script>
+inurl:/testimonial?feedback=<script>alert('XSS')</script>
+filetype:js "<script>alert('XSS')</script>"
+filetype:js "document.write('<script>alert('XSS')</script>')"
+filetype:js "window.location.href='javascript:alert('XSS')'"
+filetype:js "eval('<script>alert('XSS')</script>')"
+filetype:html "<script>alert('XSS')</script>"
+filetype:html "onload=alert('XSS')"
+filetype:html "onclick=alert('XSS')"
+filetype:html "onmouseover=alert('XSS')"
+inurl:/page?name=<script>alert('XSS')</script>
+inurl:/search?query=<script>alert('XSS')</script>
+inurl:/profile?id=<script>alert('XSS')</script>
+inurl:/article?title=<script>alert('XSS')</script>
+inurl:/post?id=<script>alert('XSS')</script>
+inurl:/search?query=<script>alert('XSS')</script>
+inurl:/view?item=<script>alert('XSS')</script>
+inurl:/category?name=<script>alert('XSS')</script>
+intext:"<form action" "<input type='text' onfocus='alert('XSS')'>"
+intext:"<form action" "<textarea onfocus='alert('XSS')'></textarea>"
+intext:"<form action" "<input type='password' onfocus='alert('XSS')'>"
+intext:"<form action" "<input type='email' onfocus='alert('XSS')'>"
+intext:"<form action" "<input type='url' onfocus='alert('XSS')'>"
+intext:"<form action" "<input type='tel' onfocus='alert('XSS')'>"
+intext:"<form action" "<input type='number' onfocus='alert('XSS')'>"
+intext:"<button onclick='alert('XSS')'>Click Me</button>"
+intext:"<a href='#' onclick='alert('XSS')'>Click Here</a>"
+intext:"<div onmouseover='alert('XSS')'>Hover Me</div>"
+intext:"<img src='x' onerror='alert('XSS')'>"
+intext:"<input type='text' onblur='alert('XSS')'>"
+intext:"<select onchange='alert('XSS')'><option>Select</option></select>"
+filetype:doc OR filetype:docx OR filetype:ppt OR filetype:pptx OR filetype:xls OR filetype:xlsx OR filetype:pdf -github.com
+inurl:"/src/" -github.com
+inurl:"/source/" -github.com
+inurl:"/code/" -github.com
+inurl:"/src/" language:python -github.com
+inurl:"/src/" language:java -github.com
+inurl:"/src/" language:javascript -github.com
+filetype:php intext:"DB_PASSWORD" -github.com
+filetype:php intext:"DB_HOST" -github.com
+filetype:php intext:"DB_USER" -github.com
+filetype:php intext:"DB_NAME" -github.com
+intitle:"Index of /" + "backup" -github.com
+intitle:"Index of /" + "uploads" -github.com
+intitle:"Index of /" + "confidential" -github.com
+filetype:txt "private_key" -github.com
+filetype:txt "private.key" -github.com
+filetype:txt "private_key.pem" -github.com
+filetype:txt "private_key.txt" -github.com
+filetype:log inurl:"access.log" -github.com
+filetype:log inurl:"error.log" -github.com
+filetype:log inurl:"debug.log" -github.com
+filetype:log inurl:"application.log" -github.com
+inurl:"redirect?to=" -github.com
+inurl:"out?url=" -github.com
+inurl:"link?url=" -github.com
+inurl:"/go?url=" -github.com
+inurl:"/out?url=" -github.com
+filetype:gitweb inurl:"/?a=summary" -github.com
+filetype:git inurl:".gitignore" -github.com
+filetype:git inurl:"config" -github.com
+filetype:git inurl:"HEAD" -github.com
+filetype:git inurl:"index" -github.com
+filetype:git inurl:"packed-refs" -github.com
+filetype:git inurl:"hooks" -github.com
+filetype:git inurl:"info" -github.com
+intitle:"RouterOS" inurl:"winbox" -github.com
+intitle:"Ubiquiti" intext:"airOS" -github.com
+intitle:"MikroTik" intext:"Webfig" -github.com
+intitle:"Ubiquiti" intext:"Rocket M5" -github.com
+intitle:"Ubiquiti" intext:"Rocket M2" -github.com
+intitle:"Ubiquiti" intext:"RocketDish" -github.com
+intitle:"Ubiquiti" intext:"NanoBeam" -github.com
+intitle:"Apache Tomcat" intext:"Apache Tomcat" -github.com
+intitle:"Tomcat Manager Application" -github.com
+intitle:"Apache Tomcat/7.0.5" intext:"If you're seeing this, you've successfully installed Tomcat." -github.com
+intitle:"Tomcat Server Administration" -github.com
+filetype:log inurl:"wp-content/install.php" -github.com
+filetype:log inurl:"wp-content/upgrade-log.php" -github.com
+filetype:pem intext:"AWS_ACCESS_KEY_ID" -github.com
+inurl:/view.shtml
+intitle:"Live View / - AXIS"
+intitle:"Live View / - AXIS 206M"
+inurl:/control/userimage.html
+intitle:"Toshiba Network Camera" user login
+intitle:"i-Catcher Console - Web Monitor"
+intitle:"Live NetSnap Cam-Server feed"
+inurl:"/axis-cgi/mjpg"
+intitle:"Live View / - AXIS 210"
+intitle:"Live View / - AXIS 2400 Video Server"
+inurl:/view/index.shtml
+intitle:"Live View / - AXIS 240"
+inurl:/mjpg/video.mjpg
+intitle:"Live View / - AXIS 206W"
+inurl:/axis-cgi/jpg
+intitle:"Toshiba Network Camera" user login
+intitle:"i-Catcher Console - Web Monitor"
+intitle:"Live NetSnap Cam-Server feed"
+intitle:"Test Page for the Apache Web Server on Fedora Core"
+intitle:"Apache Status" "Server Version: Apache"
+intitle:"Index of" "CentOS" "Test Page"
+intitle:"Index of /" "Apache/2.2.3 (CentOS)"
+intitle:"Test Page for the Nginx HTTP Server"
+intitle:"Index of /" "Apache/2.2.3 (Ubuntu)"
+intitle:"Index of /" "Apache/2.2.3 (Red Hat)"
+intitle:"Index of /" "Apache/2.2.3 (Fedora)"
+intitle:"Welcome to nginx!" "Welcome to nginx on Debian!"
+intitle:"Index of /admin"
+intitle:"Index of /backup"
+intitle:"Index of /config"
+intitle:"Index of /database"
+intitle:"Index of /logs"
+intitle:"Index of /password"
+intitle:"Index of /private"
+intitle:"Index of /secret"
+intitle:"Index of /temp"
+intitle:"Index of /upload"
+intitle:"Index of /www"
+filetype:sql intext:username password
+filetype:sql "insert into" (pass|passwd|password)
+filetype:sql "values" "username" "password"
+filetype:sql "VALUES" "username" "password"
+filetype:sql "CREATE USER" username identified by password
+filetype:sql "CREATE USER" username identified by "password"
+filetype:sql "CREATE USER" username identified by 'password'
+filetype:sql "CREATE USER" username identified by PASSWORD
+filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"%"
+filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"localhost"
+filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"%"
+filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"localhost"
+inurl:".php?param=<script>"
+inurl:".aspx?param=<script>"
+inurl:".jsp?param=<script>"
+inurl:".cgi?param=<script>"
+inurl:".js?param=<script>"
+inurl:".html?param=<script>"
+inurl:".php?id="
+inurl:".aspx?id="
+inurl:".jsp?id="
+inurl:".cgi?id="
+inurl:".pl?id="
+inurl:".cfm?id="
+inurl:".php?cmd="
+inurl:".aspx?cmd="
+inurl:".jsp?cmd="
+inurl:".cgi?cmd="
+inurl:".pl?cmd="
+inurl:".cfm?cmd="
+inurl:".php?file="
+inurl:".aspx?file="
+inurl:".jsp?file="
+inurl:".cgi?file="
+inurl:".pl?file="
+inurl:".cfm?file="
+inurl:".php?dir="
+inurl:".aspx?dir="
+inurl:".jsp?dir="
+inurl:".cgi?dir="
+inurl:".pl?dir="
+inurl:".cfm?dir="
+inurl:".php?file=http://"
+inurl:".aspx?file=http://"
+inurl:".jsp?file=http://"
+inurl:".cgi?file=http://"
+inurl:".pl?file=http://"
+inurl:".cfm?file=http://"
+inurl:".php?file=info"
+inurl:".aspx?file=info"
+inurl:".jsp?file=info"
+inurl:".cgi?file=info"
+inurl:".pl?file=info"
+inurl:".cfm?file=info"
+intitle:"Index of /private" OR "Index of /backup" OR "Index of /log" OR "Index of /logs"
+intitle:"Welcome to Elastic"
+intitle:"ElasticSearch" AND "Cluster" AND "Summary"
+intitle:"Kibana" AND "Elastic" AND "Console"
+intitle:"MongoDB Status"
+intitle:"Mongodb Server Status"
+intitle:"Index of /.git"
+intitle:"Dashboard [Jenkins]"
+intitle:"Dashboard [Hudson]"
+intitle:"Grafana" inurl:/login
+filetype:xml inurl:jenkins
+intitle:"SonarQube" inurl:/dashboard
+intitle:"Confluence" AND "Log In"
+intitle:"JIRA" AND "Log In"
+intitle:"Bamboo" AND "Log in"
+intitle:"Bitbucket" AND "Log in"
+filetype:groovy "Jenkins-CLI"
+filetype:zip OR filetype:tar.gz OR filetype:tar inurl:jenkins AND inurl:backup
+filetype:sql inurl:backup
+intitle:"GitLab" AND "Sign in"
+intitle:"Nexus Repository Manager"
+intitle:"Artifactory Repository"
+intitle:"Login" inurl:/login
+intitle:"Login" inurl:/signin
+intitle:"Login" inurl:/log-in
+intitle:"Login" inurl:/sign-in
+intitle:"Login" inurl:/account/login
+intitle:"Login" inurl:/user/login
+intitle:"Login" inurl:/members/login
+intitle:"Login" inurl:/auth/login
+intitle:"Login" inurl:/signin
+intitle:"Login" inurl:/log-in
+intitle:"Login" inurl:/sign-in
+intitle:"Login" inurl:/account/login
+intitle:"Login" inurl:/user/login
+intitle:"Login" inurl:/members/login
+intitle:"Login" inurl:/auth/login
+intitle:"RouterOS" inurl:/winbox
+intitle:"Ubiquiti" intext:"airOS"
+intitle:"MikroTik" intext:"Webfig"
+intitle:"MikroTik" intext:"Chimay Red"
+intitle:"Ubiquiti" intext:"Rocket M5"
+intitle:"Ubiquiti" intext:"Rocket M2"
+intitle:"Ubiquiti" intext:"RocketDish"
+intitle:"Ubiquiti" intext:"NanoBeam"
+intitle:"Ubiquiti" intext:"NanoStation"
+intitle:"Ubiquiti" intext:"PowerBeam"
+intitle:"Ubiquiti" intext:"LiteBeam"
+intitle:"Ubiquiti" intext:"ToughSwitch"
+intitle:"Ubiquiti" intext:"EdgeRouter"
+intitle:"Ubiquiti" intext:"EdgeMax"
+intitle:"DVR Login" inurl:/login.htm
+intitle:"DVR User Login" inurl:/login.htm
+intitle:"DVR User Login" inurl:/logon.htm
+intitle:"DVR User Login" inurl:/login.html
+intitle:"DVR User Login" inurl:/login.html
+intitle:"DVR User Login" inurl:/logon.html
+intitle:"DVR User Login" inurl:/login.asp
+intitle:"DVR User Login" inurl:/logon.asp
+intitle:"DVR User Login" inurl:/login.aspx
+intitle:"DVR User Login" inurl:/logon.aspx
+intitle:"Apache Tomcat" intext:"Apache Tomcat"
+intitle:"Tomcat Manager Application"
+intitle:"Tomcat Status" "Tomcat Web Application Manager"
+intitle:"Apache Tomcat/7.0.5" intext:"If you're seeing this, you've successfully installed Tomcat."
+intitle:"Tomcat Server Administration"
+intitle:"Tomcat Web Application Manager"
+intitle:"Tomcat" intext:"Welcome to Tomcat"
+intitle:"Apache Tomcat" intext:"Tomcat Server Administration"
+intitle:"Apache Tomcat" intext:"Tomcat Web Application Manager"
+intext:"Error 404: Not Found"
+intext:"Error 403: Forbidden"
+intext:"Error 500: Internal Server Error"
+intext:"Error 502: Bad Gateway"
+intext:"Error 503: Service Unavailable"
+intext:"Error 504: Gateway Timeout"
+intext:"Error 505: HTTP Version Not Supported"
+intext:"Error 506: Variant Also Negotiates"
+intext:"Error 507: Insufficient Storage"
+intext:"Error 508: Loop Detected"
+intext:"Error 509: Bandwidth Limit Exceeded"
+intext:"Error 510: Not Extended"
+intext:"Error 511: Network Authentication Required"
+intext:"Error 520: Unknown Error"
+intext:"Error 521: Web Server Is Down"
+intext:"Error 522: Connection Timed Out"
+intext:"Error 523: Origin Is Unreachable"
+intext:"Error 524: A Timeout Occurred"
+intext:"Error 525: SSL Handshake Failed"
+intext:"Error 526: Invalid SSL Certificate"
+intext:"Error 527: Railgun Error"
+intext:"Error 529: Site is overloaded"
+intext:"Error 530: Site is frozen"
+intext:"Error 503: Backend is unhealthy"
+intext:"Error 530: Origin DNS Error"
+filetype:gitweb inurl:git
+filetype:git "NOTICE OR LICENSE"
+filetype:git "This file is a placeholder for the README file"
+filetype:git "This file should contain a short description of the repository."
+filetype:git "This file is used to list changes made in each version of the project."
+filetype:git "This file contains important notes for the release."
+filetype:git "This file is part of the git package."
+filetype:git "This file contains release notes for the changes in each release."
+inurl:redir?url=
+inurl:url=
+inurl:redirect?url=
+inurl:link?url=
+inurl:out?url=
+inurl:to?url=
+inurl:go?url=
+inurl:redirect?url=
+inurl:open?url=
+inurl:out?url=
+inurl:leave?url=
+inurl:"/.well-known/security.txt"
+inurl:"/.well-known/security"
+inurl:"/.git/HEAD"
+inurl:"/.git/config"
+inurl:"/.git/COMMIT_EDITMSG"
+inurl:"/.git/description"
+inurl:"/.git/hooks"
+inurl:"/.git/index"
+inurl:"/.git/refs"
+inurl:"/.env"
+inurl:"/.vscode/settings.json"
+inurl:"/.vscode/extensions.json"
+inurl:"/cgi-bin/config.bin"
+inurl:"/cgi-bin/login.bin"
+inurl:"/cgi-bin/param.bin"
+inurl:"/cgi-bin/webcm"
+inurl:"/cgi-bin/wpa.cgi"
+inurl:"/cgi-bin/handler"
+inurl:"/cgi-bin/status"
+inurl:"/cgi-bin/Network"
+inurl:"/cgi-bin/admin"
+inurl:"/cgi-bin/testcgi"
+inurl:"/cgi-bin/test-cgi"
+inurl:"/cgi-bin/test"
+inurl:"/cgi-bin/php"
+inurl:"/cgi-bin/php5"
+inurl:"/cgi-bin/php4"
+inurl:"/cgi-bin/phpinfo"
+inurl:"/cgi-bin/phpinfo.php"
+inurl:"/cgi-bin/phptest.cgi"
+inurl:"/cgi-bin/test.cgi"
+inurl:"/cgi-bin/admin.cgi"
+inurl:"/cgi-bin/admin.pl"
+inurl:"/cgi-bin/test.pl"
+inurl:"/cgi-bin/test.sh"
+inurl:"/cgi-bin/status"
+inurl:"/cgi-bin/webmail.cgi"
+inurl:"/cgi-bin/php.ini"
+inurl:"/cgi-bin/.htaccess"
+inurl:"/cgi-bin/phpinfo.php"
+inurl:"/cgi-bin/db.cgi"
+inurl:"/cgi-bin/db.pl"
+inurl:"/cgi-bin/sql.cgi"
+inurl:"/cgi-bin/sqlite.cgi"
+inurl:"/cgi-bin/db.php"
+inurl:"/cgi-bin/db.pl"
+inurl:"/cgi-bin/db2.cgi"
+inurl:"/cgi-bin/dbtest.cgi"
+inurl:"/cgi-bin/dbsql.cgi"
+inurl:"/cgi-bin/dbsql.pl"
+inurl:"/cgi-bin/mysql.cgi"
+inurl:"/cgi-bin/mysql.pl"
+inurl:"/cgi-bin/mysqlmanager.cgi"
+inurl:"/cgi-bin/mysqlmanager.pl"
+inurl:"/cgi-bin/mydb.cgi"
+inurl:"/cgi-bin/oracle.cgi"
+inurl:"/cgi-bin/dbconnect.cgi"
+inurl:"/cgi-bin/mysqldb.cgi"
+inurl:"/cgi-bin/websql.cgi"
+inurl:"/cgi-bin/webdb.cgi"
+inurl:"/cgi-bin/webdb2.cgi"
+inurl:"/cgi-bin/webdbtest.cgi"
+inurl:"/cgi-bin/acsscheduler.cgi"
+inurl:"/cgi-bin/sqwebmail"
+inurl:"/cgi-bin/w3-msql"
+inurl:"/cgi-bin/dataweb"
+inurl:"/cgi-bin/jam.pl"
+inurl:"/cgi-bin/jamcgi"
+inurl:"/cgi-bin/jamweb.cgi"
+inurl:"/cgi-bin/jamtest.cgi"
+inurl:"/cgi-bin/jamsql.cgi"
+inurl:"/cgi-bin/sqldata"
+inurl:"/cgi-bin/sqldb"
+inurl:"/cgi-bin/sqlweb"
+inurl:"/cgi-bin/sqlcgi"
+inurl:"/cgi-bin/sqltest"
+inurl:"/cgi-bin/sqlshell"
+inurl:"/cgi-bin/sqlsh"
+inurl:"/cgi-bin/lsdb"
+inurl:"/cgi-bin/lsdb2"
+inurl:"/cgi-bin/xsql"
+inurl:"/cgi-bin/xsql2"
+inurl:"/cgi-bin/webcgi"
+inurl:"/cgi-bin/pagelog.cgi"
+inurl:"/cgi-bin/getlog.cgi"
+inurl:"/cgi-bin/testlog.cgi"
+inurl:"/cgi-bin/logs.cgi"
+inurl:"/cgi-bin/weblogs"
+inurl:"/cgi-bin/testlogs"
+inurl:/wp-admin
+inurl:/wp-login
+inurl:/wp-content
+inurl:/wp-includes
+inurl:/xmlrpc.php
+inurl:/readme.html
+inurl:/license.txt
+inurl:/wp-json
+inurl:/wp-trackback
+inurl:/wp-xmlrpc
+inurl:/wp-links-opml
+inurl:/wp-comments-post
+inurl:/wp-feed
+inurl:/wp-mail
+inurl:/wp-rss
+inurl:/wp-tag
+inurl:/wp-embed
+inurl:/wp-login.php?action=register
+intitle:"FTP root at"
+intitle:"FTP Server" inurl:/ftp
+intitle:"Index of /ftp"
+intitle:"Index of /" "FTP root"
+intitle:"Index of /" inurl:/ftp
+filetype:conf inurl:web.config
+filetype:conf inurl:httpd.conf
+filetype:conf inurl:php.ini
+filetype:conf inurl:my.cnf
+filetype:conf inurl:config.inc.php
+filetype:conf inurl:config.php
+filetype:conf inurl:settings.php
+filetype:conf inurl:application.properties
+filetype:conf inurl:application.yml
+filetype:conf inurl:database.yml
+filetype:conf inurl:connectionStrings.config
+filetype:conf inurl:settings.xml
+filetype:conf inurl:connections.xml
+filetype:php inurl:info
+filetype:php inurl:phpinfo
+filetype:txt inurl:wp-config
+filetype:sql "WordPress" "backup"
+filetype:log inurl:wp-content/install.php
+filetype:log inurl:wp-content/upgrade-log.php
+filetype:log "PHP Fatal error" OR "PHP Parse error" OR "PHP Warning" OR "PHP Error"
+filetype:log "login" "password"
+filetype:log "username" "password"
+filetype:log "user" "pass"
+filetype:log "secret_key"
+filetype:log "password"
+intitle:"Index of /" + "backup"
+filetype:pem intext:PRIVATE KEY
+filetype:env intext:AWS_SECRET_ACCESS_KEY
+inurl:"/uc?id="
+filetype:log inurl:apache.log
+filetype:log inurl:nginx.log
+filetype:doc OR filetype:docx OR filetype:xls OR filetype:xlsx OR filetype:ppt OR filetype:pptx
+intitle:"Index of" (doc|docx|xls|xlsx|ppt|pptx)
+filetype:txt "username" AND "password"
+filetype:txt "user" AND "pass"
+filetype:log "login: *" AND "password: *"
+intitle:"Ubiquiti" intext:"EdgeRouter"
+intitle:"Ubiquiti" intext:"EdgeMax"
+intitle:"Ubiquiti" intext:"UniFi Controller"
+intitle:"MikroTik" intext:"RouterOS"
+intitle:"Index of /" "Parent Directory"
+intitle:"Index of /" "Last modified"
+intitle:"Index of /" "Name"
+intitle:"Index of /" "Size"
+intitle:"Index of /" "Description"
+intitle:"Index of /" "Modified"
+intitle:"Index of /" "Parent Directory"
+intitle:"Index of /" "Windows 2003 Server"
+inurl:"redirect?to="
+inurl:"out?to="
+inurl:"go?to="
+inurl:"to?url="
+inurl:"link?to="
+inurl:"url?url="
+inurl:"redir?url="
+filetype:zip "wp-content"
+inurl:/mongodb/port
+intext:"-- phpMyAdmin SQL Dump"
+intext:"-- PostgreSQL database dump"
+intext:"-- Oracle SQL Dump"
+intext:"-- Dumping data for table"
+intitle:"FileZilla Server"
+inurl:"9200/_cat/indices"
+inurl:"27017"
+inurl:"6379"
+inurl:"11211"
+inurl:"5800" OR inurl:"5900"
+inurl:"3389"
+inurl:"23"
+inurl:"161"
+inurl:"3306"
+inurl:"5432"
+inurl:"873"
+inurl:"9200"
+intext:"Dashboard [Jenkins]"
+filetype:git "Repository"
+filetype:git "Index of /"
+filetype:env "MAIL_USERNAME"
+filetype:env "MAIL_PASSWORD"
+filetype:env "DB_USERNAME"
+filetype:env "DB_PASSWORD"
+filetype:env "SECRET_KEY"
+filetype:sql "wp-config" "Backup"
+filetype:zip "wp-content" "backup"
+inurl:/wp-content/plugins/ "index of /"
+filetype:txt inurl:configuration.php
+intitle:"Index of /" + "admin"
+intitle:"Index of /" + "backup"
+intitle:"Index of /" + "logs"
+intitle:"Index of /" + "config"
+intitle:"Index of /" + "database"
+intitle:"Index of /" + "passwd"
+intitle:"Index of /" + "phpmyadmin"
+intitle:"Index of /" + "wp-admin"
+intitle:"Index of /" + "wp-content"
+intitle:"Index of /" + "wp-includes"
+intitle:"Index of /" + "uploads"
+filetype:pdf "Confidential"
+filetype:pdf "Internal Use Only"
+filetype:pdf "Not for Distribution"
+filetype:doc "Confidential"
+filetype:doc "Internal Use Only"
+filetype:doc "Not for Distribution"
+filetype:xls "Confidential"
+filetype:xls "Internal Use Only"
+filetype:xls "Not for Distribution"
+filetype:key inurl:ssh
+filetype:ini "FTP" "password"
+filetype:ini "FTP" "username"
+filetype:txt "password"
+intitle:"Powered by WordPress"
+intitle:"Powered by Joomla"
+intitle:"Powered by Drupal"
+intitle:"Powered by Magento"
+intitle:"Powered by vBulletin"
+intitle:"Powered by phpBB"
+intitle:"Powered by MediaWiki"
+intitle:"Powered by ExpressionEngine"
+intitle:"Powered by Blogger"
+intitle:"Powered by TYPO3"
+inurl:/camera/view
+inurl:/view.shtml
+inurl:/view/index.shtml
+inurl:/axis-cgi/mjpg
+inurl:/control/userimage.html
+inurl:/control/faststream.htm
+inurl:/index/blink.cgi
+filetype:log "access.log"
+filetype:bkf "Microsoft's Backup Utility"
+filetype:json "api_key"
+filetype:conf inurl:apache2.conf
+filetype:conf inurl:httpd.conf
+filetype:conf inurl:nginx.conf
+intext:"Error Message" ext:log
+intitle:"PHP Version" inurl:/info.php
+intitle:"Proxy Lists"
+inurl:printer/config
+filetype:json "auths"
+filetype:sql "MySQL dump"
+intitle:"Live WebCam" inurl:/index.html
+filetype:xml "Jira" "backup"
+filetype:ini "database"
+filetype:json "AWS_ACCESS_KEY"
+filetype:git "config"
+filetype:sql "password" "CREATE USER"
+filetype:xml "config"
+intitle:"Openstack Dashboard"
+filetype:xml "Configuration"
+filetype:js "password"
+filetype:yaml "mongodb"
+filetype:xml "jenkins"
+filetype:zip "wp-content"
+filetype:json "wp-config"
+filetype:xml "password"
+filetype:sql intext:username password
+filetype:sql "insert into" (pass|passwd|password)
+filetype:sql "values" "username" "password"
+filetype:sql "VALUES" "username" "password"
+filetype:sql "CREATE USER" username identified by password
+filetype:sql "CREATE USER" username identified by "password"
+filetype:sql "CREATE USER" username identified by 'password'
+filetype:sql "CREATE USER" username identified by PASSWORD
+filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"%"
+filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"localhost"
+filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"%"
+filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"localhost"
+filetype:env intext:API_KEY
+filetype:conf inurl:apache2.conf
+filetype:conf inurl:httpd.conf
+filetype:conf inurl:nginx.conf
+filetype:json inurl:config.json
+filetype:json inurl:settings.json
+filetype:json inurl:configuration.json
+filetype:json inurl:credentials.json
+filetype:json inurl:keys.json
+filetype:json inurl:secrets.json
+filetype:json inurl:auth.json
+filetype:log inurl:logs/access.log
+filetype:log inurl:logs/error.log
+filetype:bkf OR filetype:bkp OR filetype:bak OR filetype:old OR filetype:backup
+filetype:json OR filetype:yaml OR filetype:yml "Dockerfile"
+filetype:xls "password"
+filetype:xls "login"
+filetype:xls "credentials"
+filetype:log inurl:logs/access.log
+filetype:log inurl:logs/error.log
+filetype:bkf OR filetype:bkp OR filetype:bak OR filetype:old OR filetype:backup
+filetype:json OR filetype:yaml OR filetype:yml "Dockerfile"
+filetype:xls "password"
+filetype:xls "login"
+filetype:xls "credentials"
+filetype:zip inurl:wp-content/backup
+filetype:tar inurl:wp-content/backup
+filetype:rar inurl:wp-content/backup
+filetype:sql inurl:wp-config.bak
+filetype:sql inurl:wp-config.php.bak
+filetype:conf inurl:redis.conf
+filetype:conf inurl:redis.conf.default
+filetype:conf inurl:redis.conf.bak
+filetype:yaml inurl:elasticsearch.yml
+filetype:yaml inurl:elasticsearch.yaml
+filetype:yaml inurl:elasticsearch.yml.bak
+filetype:yaml inurl:elasticsearch.yaml.bak
+filetype:conf inurl:mongodb.conf
+filetype:conf inurl:mongo.conf
+filetype:conf inurl:mongod.conf
+filetype:conf inurl:mongos.conf
+filetype:xml inurl:jenkins.xml
+filetype:xml inurl:config.xml
+filetype:xml inurl:credentials.xml
+filetype:xml inurl:hudson.util.Secret
+filetype:json inurl:jupyter_notebook_config.json
+filetype:json inurl:jupyterhub_config.json
+filetype:py inurl:settings.py
+filetype:env inurl:.env
+filetype:yaml OR filetype:yml inurl:gitlab-ci.yml
+filetype:json inurl:gitlab-secrets.json
+filetype:conf inurl:svnserve.conf
+filetype:conf inurl:svnauthz
+filetype:conf inurl:hgrc
+filetype:xml inurl:hive-site.xml
+filetype:yaml inurl:cassandra.yaml
+filetype:yaml inurl:cassandra-env.sh
+inurl:"apikey" OR inurl:"api-key" OR inurl:"api_key"
+inurl:"jwt_token" OR inurl:"jwt-token"
+inurl:"_cat/health"
+inurl:"_cat/nodes"
+inurl:"_cat/indices"
+inurl:"/info"
+inurl:"/solr" OR inurl:"/solr/admin"
+inurl:"/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/"
+intitle:"phpMyAdmin" inurl:/index.php
+intitle:"OpenCV Admin Panel" inurl:/admin
+intitle:"Pi-hole Admin Console" inurl:/admin
+intitle:"Minecraft Server Admin Panel" inurl:/admin
+intitle:"Linksys Router Admin Panel" inurl:/admin
+intitle:"VPN Admin Panel" inurl:/admin
+intitle:"Firewall Admin Panel" inurl:/admin
+intitle:"VoIP Admin Panel" inurl:/admin
+intitle:"NAS Admin Panel" inurl:/admin
+intitle:"Router Admin Panel" inurl:/admin
+intitle:"Network Camera" inurl:/liveview
+intitle:"IP Camera Viewer" inurl:/stream
+intitle:"Live Stream - powered by Tightrope Media Systems"
+intitle:"Printer Status" inurl:/printer
+intitle:"Printer Configuration" inurl:/printer
+intitle:"Printer Management" inurl:/printer
+intitle:"Printer Configuration" inurl:/ipp
+intitle:"Printer Configuration" inurl:/ipp
+intitle:"Printer Status" inurl:/ipp
+intitle:"Printer Management" inurl:/ipp
+intitle:"CUPS" intext:"Printer configuration" inurl:/admin
+intitle:"Security Camera Viewer" inurl:/live
+intitle:"Surveillance Camera" inurl:/view
+intitle:"Surveillance System" inurl:/live-feed
+intitle:"Camera Live View" inurl:/cam
+intitle:"Index of /credentials"
+intitle:"Index of /database-backup"
+intitle:"Index of /server-config"
+filetype:log "Application Error" OR "Exception" OR "Fatal Error"
+filetype:log "Access Denied" OR "Unauthorized"
+filetype:log "SQL Error" OR "Database Error"
+filetype:log "404 Not Found" OR "Page Not Found"
+filetype:log "Stack Trace" OR "Traceback"
+filetype:env intext:"API_KEY"
+filetype:env intext:"SECRET_KEY"
+filetype:env intext:"DATABASE_PASSWORD"
+filetype:env intext:"ADMIN_PASSWORD"
+filetype:env intext:"JWT_SECRET_KEY"
+filetype:zip OR filetype:tar.gz OR filetype:tar intext:"/backup/"
+intitle:"Welcome to phpMyAdmin" AND "Not Found" AND "Error 404"
+intitle:"Index of /phpMyAdmin" AND "Forbidden" AND "Error 403"
+intitle:"Apache2 Debian Default Page: It works" AND "Error 404"
+intitle:"Apache HTTP Server Test Page powered by CentOS" AND "Error 404"
+intitle:"NVR Login" inurl:/login.htm
+intitle:"NVR User Login" inurl:/login.htm
+intitle:"NVR User Login" inurl:/logon.htm
+intitle:"NVR User Login" inurl:/login.html
+intitle:"NVR User Login" inurl:/login.html
+intitle:"NVR User Login" inurl:/logon.html
+intitle:"NVR User Login" inurl:/login.asp
+intitle:"NVR User Login" inurl:/logon.asp
+intitle:"NVR User Login" inurl:/login.aspx
+intitle:"NVR User Login" inurl:/logon.aspx
+intitle:"Index of /config-backup"
+intitle:"Index of /uploads-private"
+intitle:"Index of /logs-sensitive"
+intitle:"Welcome to phpMyAdmin" AND "Not Found" AND "Error 404"
+intitle:"Index of /phpMyAdmin" AND "Forbidden" AND "Error 403"
+intitle:"Apache2 Debian Default Page: It works" AND "Error 404"
+intitle:"Apache HTTP Server Test Page powered by CentOS" AND "Error 404"
+intitle:"Apache2 Ubuntu Default Page: It works" AND "Error 404"
+intitle:"Welcome to nginx!" AND "Error 404"
+intitle:"Index of /" "Parent Directory" "Error 403"
+intitle:"Index of /" "Parent Directory" "Error 404"
+intitle:"Index of /" "Parent Directory" "Error 403" "Forbidden"
+intitle:"Index of /" "Parent Directory" "Error 404" "Not Found"
+intitle:"Test Page for the Apache HTTP Server" "It Worked!"
+intitle:"Test Page for the Nginx HTTP Server" "Welcome to nginx!"
+intitle:"Test Page for the Apache Web Server on Fedora" "Fedora Core Test Page"
+intitle:"Apache Status" "Server Version: Apache"
+intitle:"Test Page for the Apache HTTP Server on Fedora Core"
+intitle:"Index of /" "CentOS" "Test Page"
+intitle:"Index of /" "Apache/2.2.3 (CentOS)"
+intitle:"Index of /" "Apache/2.2.3 (Ubuntu)"
+intitle:"Index of /" "Apache/2.2.3 (Red Hat)"
+intitle:"Index of /" "Apache/2.2.3 (Fedora)"
+intitle:"Router Login" inurl:/login.htm
+inurl:/search.php?q=
+inurl:s3.amazonaws.com
+filetype:json "wordpress"
+filetype:xml inurl:app/etc/local.xml
+intitle:"Elasticsearch" intext:"You Know, for Search"
+filetype:git "password"
+intitle:"Dashboard [Jenkins]" inurl:/view
+intitle:"Redis" intext:"Authentication required"
+intitle:"MongoDB" intext:"Error Page"
+inurl:/owasp
+intitle:"Apache Tomcat" intext:"Tomcat Web Application Manager"
+inurl:redirect?to=
+inurl:/search?q=<script>alert(1)</script>
+intitle:"500 Internal Server Error"
+inurl:/api/v1
+intitle:"phpMyAdmin" "Welcome to phpMyAdmin"
+intitle:"Jupyter Notebook" inurl:/tree
+intitle:"Grafana - Sign In" inurl:/login
+inurl:"/vulnerable_app"
+inurl:/api/v1
+inurl:/api/v2
+inurl:/api/v3
+inurl:/api/v1/*.*
+inurl:/api/v2/*.*
+inurl:/api/v3/*.*
+intitle:"Index of /.git"
+intitle:"Index of /git"
+intitle:"Index of /s3"
+intitle:"Index of /s3bucket"
+filetype:bkf "Microsoft Backup"
+filetype:bkp "Backup" OR "Bak" OR "BKP"
+filetype:ini "password"
+filetype:conf "password"
+filetype:cfg "password"
+filetype:config "password"
+filetype:sql "database"
+filetype:sql "backup"
+filetype:sql "bak"
+intext:"password" AND "public static final"
+intext:"password" AND "private static final"
+intext:"password" AND "public String"
+intext:"password" AND "private String"
+filetype:json "aws_access_key"
+filetype:json "aws_secret_access_key"
+filetype:json "api_key"
+filetype:json "api_secret_key"
+filetype:json "api_access_key"
+filetype:json "api_token"
+filetype:pem "PRIVATE KEY"
+filetype:key "BEGIN RSA PRIVATE KEY"
+filetype:pfx "Certificate"
+intext:"eval($_POST['shell'])"
+filetype:xml "CMS Configuration"
+filetype:xml "CMS Settings"
+intitle:"Index of /backup" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
+intitle:"Index of /ipp" AND (filetype:conf OR filetype:config OR filetype:backup OR filetype:bkp)
+intitle:"Index of /fw" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
+intitle:"Index of /cam-config" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
+intitle:"Index of /iot" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
+intitle:"Index of /switch-config" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
+filetype:git inurl:/.git
+filetype:svn inurl:/viewvc
+filetype:hg inurl:.hg
+filetype:pserver inurl:/CVS
+filetype:code-workspace inurl:/.vscode
+intitle:"Welcome to JBoss" intext:"Username" intext:"Password"
+intitle:"Dashboard [Jenkins]"
+intitle:"Welcome to Jenkins!"
+intitle:"Login - JIRA" AND "Powered by Atlassian JIRA"
+intitle:"Microsoft SQL Server Web Administration"
+intitle:"Redis key-value store in production" intext:"redis_version"
+intitle:"MongoDB Status" intext:"MongoDB Server Status"
+intitle:"Elastic Cluster Overview" intext:"You Know, for Search"
+intitle:"Welcome to Solr" intext:"Solr Admin"
+intitle:"RabbitMQ Management" intext:"RabbitMQ Management"
+intitle:"Kubernetes Dashboard"
+intitle:"Grafana -" intext:"Welcome to Grafana"
+intitle:"Index of /backup" inurl:/mongodb
+intitle:"Index of /backup" inurl:/elasticsearch
+filetype:ini "Host" AND "Username" AND "Password" AND "Port" inurl:ftp
+filetype:key inurl:ssh
+filetype:env OR filetype:ini OR filetype:cfg OR filetype:config inurl:/config/
+filetype:sql "INSERT INTO" "VALUES" "WordPress" inurl:/wp-content/
+intitle:"phpMyAdmin" AND "Welcome to phpMyAdmin"
+filetype:php "Index of /src/" OR "Index of /source/" OR "Index of /code/"
+inurl:"file.php?id="
+inurl:"page.php?id="
+inurl:"view.php?id="
+inurl:"content.php?id="
+inurl:"product.php?id="
+inurl:"gallery.php?id="
+inurl:"show.php?id="
+inurl:"display.php?id="
+inurl:"download.php?id="
+inurl:"article.php?id="
+inurl:"news.php?id="
+inurl:"page.php?category="
+inurl:"product.php?category="
+inurl:"view.php?item="
+inurl:"gallery.php?album="
+inurl:"show.php?article="
+inurl:"display.php?content="
+inurl:"download.php?file="
+inurl:"article.php?title="
+inurl:"news.php?article="
+inurl:"search.php?q="
+inurl:"browse.php?category="
+inurl:"search.php?query="
+inurl:"results.php?search="
+inurl:"view.php?name="
+inurl:"show.php?file="
+inurl:"details.php?item="
+inurl:"content.php?article="
+inurl:"profile.php?user="
+inurl:"search.php?query="
+inurl:"upload.php?file="
+inurl:"upload.php?filename="
+inurl:"upload.php?path="
+inurl:"upload.php?directory="
+inurl:"upload.php?data="
+inurl:"upload.php?cmd="
+inurl:"upload.php?exec="
+inurl:"upload.php?command="
+inurl:"upload.php?payload="
+inurl:"upload.php?execute="
+inurl:"change_password.php?user="
+inurl:"update_profile.php?user="
+inurl:"update_settings.php?user="
+inurl:"update_info.php?user="
+inurl:"update_account.php?user="
+inurl:"update_data.php?user="
+inurl:"change_email.php?user="
+inurl:"modify_password.php?user="
+inurl:"modify_profile.php?user="
+inurl:"modify_settings.php?user="
+inurl:"config.php"
+inurl:"database.php"
+inurl:"settings.php"
+inurl:"secrets.php"
+inurl:"credentials.php"
+inurl:"connection.php"
+inurl:"keys.php"
+inurl:"passwords.php"
+inurl:"api_key.php"
+inurl:"access_log.txt"
+inurl:"error_log.txt"
+inurl:"login.php?admin=true"
+inurl:"admin.php?access=1"
+inurl:"signin.php?admin=true"
+inurl:"admin_login.php?root=true"
+inurl:"dashboard.php?admin=true"
+inurl:"authenticate.php?admin=true"
+inurl:"access.php?admin=true"
+inurl:"auth.php?admin=true"
+inurl:"verify.php?admin=true"
+inurl:"execute.php?code="
+inurl:"run.php?code="
+inurl:"eval.php?code="
+inurl:"execute_script.php?code="
+inurl:"eval_script.php?code="
+inurl:"run_script.php?code="
+inurl:"execute_code.php?code="
+inurl:"run_code.php?code="
+inurl:"eval_code.php?code="
+inurl:"run_command.php?cmd="
+inurl:"execute_command.php?cmd="
+inurl:"command.php?exec="
+inurl:"run_shell.php?cmd="
+inurl:"execute_shell.php?cmd="
+inurl:"shell.php?command="
+inurl:"run_cmd.php?cmd="
+inurl:"execute_cmd.php?cmd="
+inurl:"cmd.php?run="
+inurl:"load_script.php?name="
+inurl:"get_script.php?file="
+inurl:"include_script.php?src="
+inurl:"import_script.php?file="
+inurl:"load_js.php?name="
+inurl:"get_js.php?file="
+inurl:"include_js.php?src="
+inurl:"import_js.php?file="
+inurl:"proxy.php?url="
+inurl:"fetch.php?url="
+inurl:"request.php?url="
+inurl:"get_url.php?url="
+inurl:"open.php?url="
+inurl:"read.php?url="
+inurl:"load.php?url="
+inurl:"access.php?url="
+inurl:"download_url.php?url="
+inurl:"upload_file.php"
+inurl:"file_upload.php"
+inurl:"upload_image.php"
+inurl:"image_upload.php"
+inurl:"upload_photo.php"
+inurl:"photo_upload.php"
+inurl:"upload_document.php"
+inurl:"document_upload.php"
+inurl:"view_file.php?file="
+inurl:"read_file.php?path="
+inurl:"display_file.php?file="
+inurl:"open_file.php?filename="
+inurl:"access_file.php?file="
+inurl:"load_file.php?filepath="
+inurl:"fetch_file.php?file="
+inurl:"download_file.php?name="
+inurl:"get_file.php?path="
+inurl:"download.php?file="
+inurl:"file_download.php?file="
+inurl:"get_file.php?file="
+inurl:"file_get.php?file="
+inurl:"fetch_file.php?name="
+inurl:"get_attachment.php?file="
+inurl:"load_attachment.php?file="
+inurl:"access.php?origin="
+inurl:"fetch.php?origin="
+inurl:"request.php?origin="
+inurl:"get_data.php?origin="
+inurl:"load_data.php?origin="
+inurl:"read_data.php?origin="
+inurl:"include.php?file="
+inurl:"require.php?file="
+inurl:"load_file.php?file="
+inurl:"read_file.php?file="
+inurl:"fetch_file.php?file="
+inurl:"open_file.php?file="
+inurl:"load_url.php?file="
+inurl:"get_url.php?file="
+inurl:"load.php?file="
+inurl:"read.php?file="
+inurl:"fetch.php?file="
+inurl:"open.php?file="
+inurl:"include.php?file="
+inurl:"require.php?file="
+inurl:"access.php?file="
+inurl:"get_file.php?file="
+inurl:"load_script.php?name="
+inurl:"get_script.php?file="
+inurl:"include_script.php?src="
+inurl:"import_script.php?file="
+inurl:"load_js.php?name="
+inurl:"get_js.php?file="
+inurl:"include_js.php?src="
+inurl:"import_js.php?file="
+inurl:"log.php?data="
+inurl:"logs.php?file="
+inurl:"error.php?message="
+inurl:"access_log.php?data="
+inurl:"debug.php?data="
+inurl:"trace.php?log="
+inurl:"audit.php?log="
+inurl:"event_log.php?message="
+inurl:"run_command.php?cmd="
+inurl:"execute_command.php?cmd="
+inurl:"command.php?exec="
+inurl:"run_shell.php?cmd="
+inurl:"execute_shell.php?cmd="
+inurl:"shell.php?command="
+inurl:"run_cmd.php?cmd="
+inurl:"execute_cmd.php?cmd="
+inurl:"cmd.php?run="
+inurl:"redirect.php?url="
+inurl:"go.php?url="
+inurl:"out.php?url="
+inurl:"leave.php?url="
+inurl:"to.php?url="
+inurl:"outgoing.php?url="
+inurl:"redirecting.php?url="
+inurl:"forward.php?url="
+inurl:"change_password.php?user="
+inurl:"update_profile.php?user="
+inurl:"update_settings.php?user="
+inurl:"update_info.php?user="
+inurl:"update_account.php?user="
+inurl:"update_data.php?user="
+inurl:"change_email.php?user="
+inurl:"modify_password.php?user="
+inurl:"modify_profile.php?user="
+inurl:"modify_settings.php?user="
+inurl:"search.php?q="
+inurl:"browse.php?category="
+inurl:"search.php?query="
+inurl:"results.php?search="
+inurl:"view.php?name="
+inurl:"show.php?file="
+inurl:"details.php?item="
+inurl:"content.php?article="
+inurl:"profile.php?user="
+inurl:"search.php?query="
+inurl:"upload_file.php"
+inurl:"file_upload.php"
+inurl:"upload_image.php"
+inurl:"image_upload.php"
+inurl:"upload_photo.php"
+inurl:"photo_upload.php"
+inurl:"upload_document.php"
+inurl:"document_upload.php"
+inurl:"download.php?file=1"
+inurl:"view.php?id=1"
+inurl:"show.php?article=1"
+inurl:"download_file.php?name=1"
+inurl:"load.php?file="
+inurl:"read.php?file="
+inurl:"fetch.php?file="
+inurl:"open.php?file="
+inurl:"include.php?file="
+inurl:"require.php?file="
+inurl:"access.php?file="
+inurl:"get_file.php?file="
+inurl:"proxy.php?url="
+inurl:"fetch.php?url="
+inurl:"request.php?url="
+inurl:"get_url.php?url="
+inurl:"open.php?url="
+inurl:"read.php?url="
+inurl:"load.php?url="
+inurl:"access.php?url="
+inurl:"download_url.php?url="
+inurl:"download.php?file="
+inurl:"file_download.php?file="
+inurl:"get_file.php?file="
+inurl:"file_get.php?file="
+inurl:"fetch_file.php?name="
+inurl:"get_attachment.php?file="
+inurl:"load_attachment.php?file="
+inurl:"process.php?xml="
+inurl:"load.php?xml="
+inurl:"upload_xml.php?data="
+inurl:"execute_xml.php?xml="
+inurl:"parse_xml.php?file="
+inurl:"fetch_xml.php?url="
+inurl:"import_xml.php?file="
+inurl:"run_command.php?cmd="
+inurl:"execute_command.php?cmd="
+inurl:"command.php?exec="
+inurl:"run_shell.php?cmd="
+inurl:"execute_shell.php?cmd="
+inurl:"shell.php?command="
+inurl:"run_cmd.php?cmd="
+inurl:"execute_cmd.php?cmd="
+inurl:"cmd.php?run="
+inurl:"test.php"
+inurl:"debug.php"
+inurl:"dev.php"
+inurl:"tmp.php"
+inurl:"backup.php"
+inurl:"config_test.php"
+inurl:"setup.php"
+inurl:"config.php.sample"
+inurl:"example.php"
+inurl:"config.php"
+inurl:"database.php"
+inurl:"settings.php"
+inurl:"secrets.php"
+inurl:"credentials.php"
+inurl:"connection.php"
+inurl:"keys.php"
+inurl:"passwords.php"
+inurl:"api_key.php"
+inurl:"access_log.txt"
+inurl:"error_log.txt"
+inurl:"login.php?admin=true"
+inurl:"admin.php?access=1"
+inurl:"signin.php?admin=true"
+inurl:"admin_login.php?root=true"
+inurl:"dashboard.php?admin=true"
+inurl:"authenticate.php?admin=true"
+inurl:"access.php?admin=true"
+inurl:"auth.php?admin=true"
+inurl:"verify.php?admin=true"
+inurl:"include.php?file="
+inurl:"require.php?file="
+inurl:"load_file.php?file="
+inurl:"read_file.php?file="
+inurl:"fetch_file.php?file="
+inurl:"open_file.php?file="
+inurl:"load_url.php?file="
+inurl:"get_url.php?file="
+inurl:"page.php?category="
+inurl:"product.php?category="
+inurl:"view.php?item="
+inurl:"gallery.php?album="
+inurl:"show.php?article="
+inurl:"display.php?content="
+inurl:"download.php?file="
+inurl:"article.php?title="
+inurl:"news.php?article="
+inurl:"view_file.php?file="
+inurl:"read_file.php?path="
+inurl:"display_file.php?file="
+inurl:"open_file.php?filename="
+inurl:"access_file.php?file="
+inurl:"load_file.php?filepath="
+inurl:"fetch_file.php?file="
+inurl:"download_file.php?name="
+inurl:"get_file.php?path="
 intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
 intitle:(“TrackerCam Live Video”)|(“TrackerCam Application Login”)|(“Trackercam Remote”) -trackercam.com
 inurl:admin inurl:userlist Generic userlist files
@@ -5320,1530 +6409,6 @@ updatebasket.php?bookid=
 updates.php?ID=
 usb/devices/showdev.php?id=
 veranstaltungen/detail.php?id=
-video.php?content=
-video.php?id=
-view_author.php?id=
-view_cart.php?title=
-view_detail.php?ID=
-view_faq.php?id=
-view_item.php?id=
-view_item.php?item=
-view_items.php?id=
-view_newsletter.php?id=
-view_product.php?id=
-view-event.php?id=
-view.php?*[*]*=
-view.php?adresa=
-view.php?b=
-view.php?body=
-view.php?channel=
-view.php?chapter=
-view.php?choix=
-view.php?cid=
-view.php?cmd=
-view.php?content=
-view.php?disp=
-view.php?get=
-view.php?go=
-view.php?goFile=
-view.php?goto=
-view.php?header=
-view.php?id=
-view.php?incl=
-view.php?ir=
-view.php?ki=
-view.php?lang=
-view.php?load=
-view.php?loader=
-view.php?mid=
-view.php?middle=
-view.php?mod=
-view.php?oldal=
-view.php?option=
-view.php?pag=
-view.php?page=
-view.php?pageNum_rscomp=
-view.php?panel=
-view.php?pg=
-view.php?phpbb_root_path=
-view.php?pollname=
-view.php?pr=
-view.php?qry=
-view.php?recipe=
-view.php?redirect=
-view.php?sec=
-view.php?secao=
-view.php?seccion=
-view.php?second=
-view.php?seite=
-view.php?showpage=
-view.php?sp=
-view.php?str=
-view.php?to=
-view.php?type=
-view.php?u=
-view.php?var=
-view.php?where=
-view/7/9628/1.html?reply=
-viewapp.php?id=
-viewcart.php?CartId=
-viewCart.php?userID=
-viewCat_h.php?idCategory=
-viewevent.php?EventID=
-viewitem.php?recor=
-viewphoto.php?id=
-viewPrd.php?idcategory=
-ViewProduct.php?misc=
-viewshowdetail.php?id=
-viewthread.php?tid=
-voteList.php?item_ID=
-wamp_dir/setup/yesno.phtml?no_url=
-warning "error on line" php sablotron
-WebLog Referrers
-website.php?id=
-Welcome to ntop!
-whatsnew.php?idCategory=
-wiki/pmwiki.php?page****=
-Windows 2000 web server error messages
-WsAncillary.php?ID=
-WsPages.php?ID=noticiasDetalle.php?xid=
-www/index.php?page=
-wwwboard WebAdmin inurl:passwd.txt wwwboard|webadmin
-WWWThreads")|(inurl:"wwwthreads/login.php")|(inurl:"wwwthreads/login.pl?Cat=")
-XOOPS Custom Installation
-yacht_search/yacht_view.php?pid=
-YZboard/view.php?id=
-zb/view.php?uid=
-zentrack/index.php?configFile=
-site:accounts..com/signin/ intitle:"index of" drupal intitle:"index of" admin inurl:login.cgi    Pages Containing Login Portals site:/joomla/administrator
-inurl:/login/index.jsp -site:hertz.*
-intitle:"Index of" inurl:wp-json/oembed    
-intitle:"Index of" phpmyadmin
-intitle:"Index of" wp-admin
-intitle:index.of.?.sql
-inurl: /filemanager/dialog.php
-s3 site:amazonaws.com filetype:log
-inurl:cgi/login.pl
-inurl:zoom.us/j and intext:scheduled for
-site:*/auth intitle:login
-nurl: admin/login.aspx    Pages Containing Login Portals
-"Index of" inurl:webalizer
-"Index of" inurl:phpmyadmin
-"Index of" inurl:htdocs inurl:xampp
-s3 site:amazonaws.com intext:dhcp filetype:txt inurl:apollo
-inurl:/index.aspx/login
-site:amazonaws.com inurl:login.php
-intitle:"IIS Windows Server" -inurl:"IIS Windows Server"
-intitle:"Apache2 Ubuntu Default Page: It works"    
-inurl:/filedown.php?file=
-inurl:Dashboard.jspa intext:"Atlassian Jira Project Management Software"
-inurl:app/kibana intext:Loading Kibana
-site:https://docs.google.com/spreadsheets edit
-inurl:8443 AND -intitle:8443 AND -intext:8443 prohibited|restricted|unauthorized
-intitle:"index of" unattend.xml
-inurl:/admin/index.php
-inurl:bc.googleusercontent.com intitle:index of
-inurl:office365 AND intitle:"Sign In | Login | Portal"
-intext:"@gmail.com" AND intext:"@yahoo.com" filetype:sql
-intitle:OmniDB intext:"user. pwd. Sign in."
-intitle:"qBittorrent Web UI" inurl:8080
-site:com inurl:jboss filetype:log -github.com
-intitle:"index of" ".cpanel/caches/config/"
-inurl:'/scopia/entry/index.jsp'
-inurl:/index.aspx/login
-intitle: "index of" "./" "./bitcoin"
-inurl:/portal/apis/fileExplorer/
-intitle:"index of" "/aws.s3/"
-intitle:"index of" hosts.csv | firewalls.csv | linux.csv | windows.csv
-intitle:Test Page for the Nginx HTTP Server on Fedora
-inurl:_cpanel/forgotpwd
-intitle:"index of /" intext:/backup
-intitle:"Swagger UI - " + "Show/Hide"
-site:drive.google.com /preview intext:movie inurl:flv | wmv | mp4 -pdf -edit -view
-intext:"class JConfig {" inurl:configuration.php
-"index of" "database.sql.zip"
-inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure
-inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo
-ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute”
-inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:&
-inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de
-site:groups.google.com
-site:s3.amazonaws.com
-site:blob.core.windows.net
-site:googleapis.com
-site:drive.google.com
-site:dev.azure.com
-site:onedrive.live.com
-site:digitaloceanspaces.com
-site:sharepoint.com
-intext:"error_reporting(E_ALL)" intitle:"phpinfo()" -github.com
-intext:"sql_query" inurl:"admin.php" -github.com
-inurl:"config.inc.php" OR inurl:"config/config.ini.php" OR inurl:"config/config.php" -github.com
-intitle:"index of" intext:"wp-config.php" -github.com
-inurl:"upload.php" intext:"File Upload" -github.com
-inurl:"error_log" intext:"PHP Error logs" -github.com
-inurl:"login.php" intext:"Login Page" -github.com
-inurl:"login.html" intext:"Admin Login" -github.com
-intext:"API_KEY" -github.com
-inurl:"api/v1" -github.com
-inurl:"swagger.json" -github.com
-inurl:"/graphql" -github.com
-inurl:"/api-docs" -github.com
-inurl:"/api/v2" -github.com
-inurl:"/api/v3" -github.com
-intext:"-----BEGIN PRIVATE KEY-----" -github.com
-intext:"client_secret" -github.com
-intext:"password" filetype:env -github.com
-intext:"apikey" filetype:env -github.com
-intext:"username" filetype:env -github.com
-intext:"jdbc.password" -github.com
-intext:"oauth.token" -github.com
-inurl:download.php?file=
-intitle:"Index of /" inurl:download.php
-intitle:"Download" inurl:download.php
-intitle:"Download File" inurl:download.php
-intitle:"File Download" inurl:download.php
-intitle:"Download Page" inurl:download.php
-intitle:"Download Link" inurl:download.php
-intitle:"Download Resource" inurl:download.php
-intitle:"Download Center" inurl:download.php
-intitle:"Download Manager" inurl:download.php
-intitle:"Download Script" inurl:download.php
-intitle:"File URL" inurl:download.php
-intitle:"File Path" inurl:download.php
-intitle:"Direct Download" inurl:download.php
-intitle:"Downloadable File" inurl:download.php
-intitle:"File Repository" inurl:download.php
-intitle:"File Hosting" inurl:download.php
-intitle:"File Distribution" inurl:download.php
-intitle:"Downloadable Resource" inurl:download.php
-inurl:download.php?file=
-inurl:download.php?name=
-inurl:download.php?filename=
-inurl:download.php?download=
-inurl:download.php?file_id=
-inurl:download.php?file_name=
-inurl:download.php?filepath=
-inurl:download.php?resource=
-inurl:download.php?item=
-inurl:download.php?attachment=
-inurl:download.php?doc=
-inurl:download.php?type=
-inurl:download.php?link=
-inurl:download.php?url=
-inurl:download.php?target=
-inurl:download.php?source=
-inurl:download.php?content=
-inurl:download.php?document=
-inurl:download.php?data=
-inurl:download.php?product=
-inurl:download.php?code=
-inurl:download.php?key=
-inurl:download.php?source_file=
-inurl:download.php?output=
-inurl:download.php?resource_path=
-inurl:download.php?target_file=
-inurl:download.php?resource_url=
-inurl:download.php?file_path=
-inurl:download.php?file_url=
-inurl:download.php?attachment_id=
-inurl:download.php?file_location=
-inurl:download.php?file_path=
-inurl:"/downloads/download.php?file="
-inurl:"/files/download.php?name="
-inurl:"/file/download.php?filename="
-inurl:"/dl/download.php?file="
-inurl:"/dl/download.php?name="
-inurl:"/dl/download.php?filename="
-inurl:"/getfile/download.php?file="
-inurl:"/getfile/download.php?name="
-inurl:"/getfile/download.php?filename="
-inurl:"/download-files/download.php?file="
-inurl:"/download-files/download.php?name="
-inurl:"/download-files/download.php?filename="
-inurl:"/download-resource/download.php?file="
-inurl:"/download-resource/download.php?name="
-inurl:"/download-resource/download.php?filename="
-inurl:"/file-download/download.php?file="
-inurl:"/file-download/download.php?name="
-inurl:"/file-download/download.php?filename="
-inurl:"/content-download/download.php?file="
-inurl:"/content-download/download.php?name="
-inurl:"/content-download/download.php?filename="
-inurl:"/resource-download/download.php?file="
-inurl:"/resource-download/download.php?name="
-inurl:"/resource-download/download.php?filename="
-inurl:"/download-link/download.php?url="
-inurl:"/download-link/download.php?link="
-inurl:"/download-link/download.php?source="
-inurl:"/download-link/download.php?content="
-inurl:"/download-link/download.php?document="
-intitle:"index of" "backup" -github.com
-intitle:"index of" "backups" -github.com
-inurl:"/backup/" -github.com
-inurl:"/backup" -github.com
-intext:"backup.sql" -github.com
-intext:"backup.zip" -github.com
-inurl:"/backup" filetype:zip -github.com
-intitle:"Login" inurl:"admin" -github.com
-intitle:"Sign In" inurl:"admin" -github.com
-intitle:"Member Login" -github.com
-intitle:"User Login" -github.com
-intitle:"Staff Login" -github.com
-inurl:index.php?id=
-inurl:article.php?id=
-inurl:gallery.php?id=
-inurl:news.php?id=
-inurl:product.php?id=
-inurl:category.php?id=
-inurl:content.php?id=
-inurl:download.php?id=
-inurl:profile.php?id=
-inurl:shop.php?id=
-inurl:show.php?id=
-inurl:item.php?id=
-inurl:review.php?id=
-inurl:read.php?id=
-inurl:faq.php?id=
-inurl:search.php?id=
-inurl:archive.php?id=
-inurl:event.php?id=
-inurl:calendar.php?id=
-inurl:login.php?id=
-inurl:register.php?id=
-inurl:checkout.php?id=
-inurl:confirm.php?id=
-inurl:process.php?id=
-filetype:php intext:"SQL syntax"
-filetype:asp inurl:"id=" intext:"OleDbException"
-filetype:log intext:"You have an error in your SQL syntax"
-inurl:".php?param="
-inurl:".php?id="
-inurl:"page.php?id="
-inurl:"product-detail.php?id="
-inurl:"viewitem.php?id="
-inurl:"news_detail.php?id="
-inurl:"post.php?id="
-inurl:"event.php?id="
-inurl:"category.php?id="
-inurl:"download.php?id="
-inurl:"content.php?id="
-inurl:"index.php?id="
-inurl:"gallery.php?id="
-inurl:"news.php?id="
-inurl:"product.php?id="
-inurl:"category.php?id="
-inurl:"content.php?id="
-inurl:"download.php?id="
-inurl:"profile.php?id="
-inurl:"shop.php?id="
-inurl:"show.php?id="
-inurl:"item.php?id="
-inurl:"review.php?id="
-inurl:"read.php?id="
-inurl:"faq.php?id="
-inurl:"search.php?id="
-inurl:"archive.php?id="
-inurl:"event.php?id="
-inurl:"calendar.php?id="
-inurl:"login.php?id="
-inurl:"register.php?id="
-inurl:"checkout.php?id="
-inurl:"confirm.php?id="
-inurl:"process.php?id="
-inurl:*.php?*
-inurl:*.asp?*
-inurl:*.aspx?*
-inurl:*.jsp?*
-filetype:asp "OleDbException"
-filetype:log "SQL syntax"
-filetype:txt "SQL syntax error"
-filetype:txt "union select"
-filetype:log "union select"
-filetype:txt "mysqli_num_rows()"
-filetype:log "mysql_fetch_array()"
-filetype:txt "ORDER BY"
-filetype:log "ORDER BY"
-inurl:".php?category_id="
-inurl:".php?product_id="
-inurl:".php?article_id="
-inurl:".php?post_id="
-inurl:".php?event_id="
-inurl:".php?calendar_id="
-inurl:".php?news_id="
-inurl:".php?item_id="
-inurl:".php?id="
-intext:"You have an error in your SQL syntax near"
-intext:"SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near"
-intext:"query failed: ERROR: parser: parse error"
-inurl:"login.php?username="
-inurl:"login.aspx?user="
-inurl:"signin.php?user="
-inurl:"auth.php?user="
-inurl:"signin.asp?user="
-inurl:"login.jsp?user="
-inurl:"search.php?query="
-inurl:"search.aspx?keyword="
-inurl:"search.asp?q="
-inurl:"search.jsp?query="
-inurl:"profile.php?user_id="
-inurl:"profile.aspx?userid="
-inurl:"user.php?id="
-inurl:"user.aspx?user_id="
-inurl:"product.php?pid="
-inurl:"product.aspx?id="
-inurl:"item.php?item_id="
-inurl:"item.aspx?prodid="
-inurl:"forum.php?topic="
-inurl:"forum.aspx?topic_id="
-inurl:"thread.php?tid="
-inurl:"thread.aspx?threadid="
-inurl:"news.php?nid="
-inurl:"news.aspx?newsid="
-inurl:"article.php?article_id="
-inurl:"article.aspx?id="
-inurl:"category.php?cat_id="
-inurl:"category.aspx?id="
-inurl:"blog.php?post_id="
-inurl:"blog.aspx?id="
-inurl:"register.php?user="
-inurl:"register.aspx?username="
-inurl:"signup.php?username="
-inurl:"forgot_password.php?email="
-inurl:"forgotpassword.aspx?email="
-inurl:"contact.php?name="
-inurl:"contact.aspx?fullname="
-inurl:"feedback.php?message="
-inurl:"feedback.aspx?msg="
-inurl:"survey.php?survey_id="
-inurl:"survey.aspx?id="
-inurl:"poll.php?id="
-inurl:"poll.aspx?pollid="
-inurl:"comments.php?post_id="
-inurl:"comments.aspx?postid="
-inurl:"cms.php?page_id="
-inurl:"cms.aspx?id="
-inurl:"checkout.php?order_id="
-inurl:/search?query=<script>alert('XSS')</script>
-inurl:/login?username=<script>alert('XSS')</script>
-inurl:/signin?email=<script>alert('XSS')</script>
-inurl:/register?fullname=<script>alert('XSS')</script>
-inurl:/contact?message=<script>alert('XSS')</script>
-inurl:/comment?text=<script>alert('XSS')</script>
-inurl:/feedback?subject=<script>alert('XSS')</script>
-inurl:/guestbook?message=<script>alert('XSS')</script>
-inurl:/feedback?comment=<script>alert('XSS')</script>
-inurl:/post?body=<script>alert('XSS')</script>
-inurl:/search?q=<script>alert('XSS')</script>
-inurl:/profile?username=<script>alert('XSS')</script>
-inurl:/user?name=<script>alert('XSS')</script>
-inurl:/about?content=<script>alert('XSS')</script>
-inurl:/portfolio?project=<script>alert('XSS')</script>
-inurl:/testimonial?feedback=<script>alert('XSS')</script>
-filetype:js "<script>alert('XSS')</script>"
-filetype:js "document.write('<script>alert('XSS')</script>')"
-filetype:js "window.location.href='javascript:alert('XSS')'"
-filetype:js "eval('<script>alert('XSS')</script>')"
-filetype:html "<script>alert('XSS')</script>"
-filetype:html "onload=alert('XSS')"
-filetype:html "onclick=alert('XSS')"
-filetype:html "onmouseover=alert('XSS')"
-inurl:/page?name=<script>alert('XSS')</script>
-inurl:/search?query=<script>alert('XSS')</script>
-inurl:/profile?id=<script>alert('XSS')</script>
-inurl:/article?title=<script>alert('XSS')</script>
-inurl:/post?id=<script>alert('XSS')</script>
-inurl:/search?query=<script>alert('XSS')</script>
-inurl:/view?item=<script>alert('XSS')</script>
-inurl:/category?name=<script>alert('XSS')</script>
-intext:"<form action" "<input type='text' onfocus='alert('XSS')'>"
-intext:"<form action" "<textarea onfocus='alert('XSS')'></textarea>"
-intext:"<form action" "<input type='password' onfocus='alert('XSS')'>"
-intext:"<form action" "<input type='email' onfocus='alert('XSS')'>"
-intext:"<form action" "<input type='url' onfocus='alert('XSS')'>"
-intext:"<form action" "<input type='tel' onfocus='alert('XSS')'>"
-intext:"<form action" "<input type='number' onfocus='alert('XSS')'>"
-intext:"<button onclick='alert('XSS')'>Click Me</button>"
-intext:"<a href='#' onclick='alert('XSS')'>Click Here</a>"
-intext:"<div onmouseover='alert('XSS')'>Hover Me</div>"
-intext:"<img src='x' onerror='alert('XSS')'>"
-intext:"<input type='text' onblur='alert('XSS')'>"
-intext:"<select onchange='alert('XSS')'><option>Select</option></select>"
-filetype:doc OR filetype:docx OR filetype:ppt OR filetype:pptx OR filetype:xls OR filetype:xlsx OR filetype:pdf -github.com
-inurl:"/src/" -github.com
-inurl:"/source/" -github.com
-inurl:"/code/" -github.com
-inurl:"/src/" language:python -github.com
-inurl:"/src/" language:java -github.com
-inurl:"/src/" language:javascript -github.com
-filetype:php intext:"DB_PASSWORD" -github.com
-filetype:php intext:"DB_HOST" -github.com
-filetype:php intext:"DB_USER" -github.com
-filetype:php intext:"DB_NAME" -github.com
-intitle:"Index of /" + "backup" -github.com
-intitle:"Index of /" + "uploads" -github.com
-intitle:"Index of /" + "confidential" -github.com
-filetype:txt "private_key" -github.com
-filetype:txt "private.key" -github.com
-filetype:txt "private_key.pem" -github.com
-filetype:txt "private_key.txt" -github.com
-filetype:log inurl:"access.log" -github.com
-filetype:log inurl:"error.log" -github.com
-filetype:log inurl:"debug.log" -github.com
-filetype:log inurl:"application.log" -github.com
-inurl:"redirect?to=" -github.com
-inurl:"out?url=" -github.com
-inurl:"link?url=" -github.com
-inurl:"/go?url=" -github.com
-inurl:"/out?url=" -github.com
-filetype:gitweb inurl:"/?a=summary" -github.com
-filetype:git inurl:".gitignore" -github.com
-filetype:git inurl:"config" -github.com
-filetype:git inurl:"HEAD" -github.com
-filetype:git inurl:"index" -github.com
-filetype:git inurl:"packed-refs" -github.com
-filetype:git inurl:"hooks" -github.com
-filetype:git inurl:"info" -github.com
-intitle:"RouterOS" inurl:"winbox" -github.com
-intitle:"Ubiquiti" intext:"airOS" -github.com
-intitle:"MikroTik" intext:"Webfig" -github.com
-intitle:"Ubiquiti" intext:"Rocket M5" -github.com
-intitle:"Ubiquiti" intext:"Rocket M2" -github.com
-intitle:"Ubiquiti" intext:"RocketDish" -github.com
-intitle:"Ubiquiti" intext:"NanoBeam" -github.com
-intitle:"Apache Tomcat" intext:"Apache Tomcat" -github.com
-intitle:"Tomcat Manager Application" -github.com
-intitle:"Apache Tomcat/7.0.5" intext:"If you're seeing this, you've successfully installed Tomcat." -github.com
-intitle:"Tomcat Server Administration" -github.com
-filetype:log inurl:"wp-content/install.php" -github.com
-filetype:log inurl:"wp-content/upgrade-log.php" -github.com
-filetype:pem intext:"AWS_ACCESS_KEY_ID" -github.com
-inurl:/view.shtml
-intitle:"Live View / - AXIS"
-intitle:"Live View / - AXIS 206M"
-inurl:/control/userimage.html
-intitle:"Toshiba Network Camera" user login
-intitle:"i-Catcher Console - Web Monitor"
-intitle:"Live NetSnap Cam-Server feed"
-inurl:"/axis-cgi/mjpg"
-intitle:"Live View / - AXIS 210"
-intitle:"Live View / - AXIS 2400 Video Server"
-inurl:/view/index.shtml
-intitle:"Live View / - AXIS 240"
-inurl:/mjpg/video.mjpg
-intitle:"Live View / - AXIS 206W"
-inurl:/axis-cgi/jpg
-intitle:"Toshiba Network Camera" user login
-intitle:"i-Catcher Console - Web Monitor"
-intitle:"Live NetSnap Cam-Server feed"
-intitle:"Test Page for the Apache Web Server on Fedora Core"
-intitle:"Apache Status" "Server Version: Apache"
-intitle:"Index of" "CentOS" "Test Page"
-intitle:"Index of /" "Apache/2.2.3 (CentOS)"
-intitle:"Test Page for the Nginx HTTP Server"
-intitle:"Index of /" "Apache/2.2.3 (Ubuntu)"
-intitle:"Index of /" "Apache/2.2.3 (Red Hat)"
-intitle:"Index of /" "Apache/2.2.3 (Fedora)"
-intitle:"Welcome to nginx!" "Welcome to nginx on Debian!"
-intitle:"Index of /admin"
-intitle:"Index of /backup"
-intitle:"Index of /config"
-intitle:"Index of /database"
-intitle:"Index of /logs"
-intitle:"Index of /password"
-intitle:"Index of /private"
-intitle:"Index of /secret"
-intitle:"Index of /temp"
-intitle:"Index of /upload"
-intitle:"Index of /www"
-filetype:sql intext:username password
-filetype:sql "insert into" (pass|passwd|password)
-filetype:sql "values" "username" "password"
-filetype:sql "VALUES" "username" "password"
-filetype:sql "CREATE USER" username identified by password
-filetype:sql "CREATE USER" username identified by "password"
-filetype:sql "CREATE USER" username identified by 'password'
-filetype:sql "CREATE USER" username identified by PASSWORD
-filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"%"
-filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"localhost"
-filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"%"
-filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"localhost"
-inurl:".php?param=<script>"
-inurl:".aspx?param=<script>"
-inurl:".jsp?param=<script>"
-inurl:".cgi?param=<script>"
-inurl:".js?param=<script>"
-inurl:".html?param=<script>"
-inurl:".php?id="
-inurl:".aspx?id="
-inurl:".jsp?id="
-inurl:".cgi?id="
-inurl:".pl?id="
-inurl:".cfm?id="
-inurl:".php?cmd="
-inurl:".aspx?cmd="
-inurl:".jsp?cmd="
-inurl:".cgi?cmd="
-inurl:".pl?cmd="
-inurl:".cfm?cmd="
-inurl:".php?file="
-inurl:".aspx?file="
-inurl:".jsp?file="
-inurl:".cgi?file="
-inurl:".pl?file="
-inurl:".cfm?file="
-inurl:".php?dir="
-inurl:".aspx?dir="
-inurl:".jsp?dir="
-inurl:".cgi?dir="
-inurl:".pl?dir="
-inurl:".cfm?dir="
-inurl:".php?file=http://"
-inurl:".aspx?file=http://"
-inurl:".jsp?file=http://"
-inurl:".cgi?file=http://"
-inurl:".pl?file=http://"
-inurl:".cfm?file=http://"
-inurl:".php?file=info"
-inurl:".aspx?file=info"
-inurl:".jsp?file=info"
-inurl:".cgi?file=info"
-inurl:".pl?file=info"
-inurl:".cfm?file=info"
-intitle:"Index of /private" OR "Index of /backup" OR "Index of /log" OR "Index of /logs"
-intitle:"Welcome to Elastic"
-intitle:"ElasticSearch" AND "Cluster" AND "Summary"
-intitle:"Kibana" AND "Elastic" AND "Console"
-intitle:"MongoDB Status"
-intitle:"Mongodb Server Status"
-intitle:"Index of /.git"
-intitle:"Dashboard [Jenkins]"
-intitle:"Dashboard [Hudson]"
-intitle:"Grafana" inurl:/login
-filetype:xml inurl:jenkins
-intitle:"SonarQube" inurl:/dashboard
-intitle:"Confluence" AND "Log In"
-intitle:"JIRA" AND "Log In"
-intitle:"Bamboo" AND "Log in"
-intitle:"Bitbucket" AND "Log in"
-filetype:groovy "Jenkins-CLI"
-filetype:zip OR filetype:tar.gz OR filetype:tar inurl:jenkins AND inurl:backup
-filetype:sql inurl:backup
-intitle:"GitLab" AND "Sign in"
-intitle:"Nexus Repository Manager"
-intitle:"Artifactory Repository"
-intitle:"Login" inurl:/login
-intitle:"Login" inurl:/signin
-intitle:"Login" inurl:/log-in
-intitle:"Login" inurl:/sign-in
-intitle:"Login" inurl:/account/login
-intitle:"Login" inurl:/user/login
-intitle:"Login" inurl:/members/login
-intitle:"Login" inurl:/auth/login
-intitle:"Login" inurl:/signin
-intitle:"Login" inurl:/log-in
-intitle:"Login" inurl:/sign-in
-intitle:"Login" inurl:/account/login
-intitle:"Login" inurl:/user/login
-intitle:"Login" inurl:/members/login
-intitle:"Login" inurl:/auth/login
-intitle:"RouterOS" inurl:/winbox
-intitle:"Ubiquiti" intext:"airOS"
-intitle:"MikroTik" intext:"Webfig"
-intitle:"MikroTik" intext:"Chimay Red"
-intitle:"Ubiquiti" intext:"Rocket M5"
-intitle:"Ubiquiti" intext:"Rocket M2"
-intitle:"Ubiquiti" intext:"RocketDish"
-intitle:"Ubiquiti" intext:"NanoBeam"
-intitle:"Ubiquiti" intext:"NanoStation"
-intitle:"Ubiquiti" intext:"PowerBeam"
-intitle:"Ubiquiti" intext:"LiteBeam"
-intitle:"Ubiquiti" intext:"ToughSwitch"
-intitle:"Ubiquiti" intext:"EdgeRouter"
-intitle:"Ubiquiti" intext:"EdgeMax"
-intitle:"DVR Login" inurl:/login.htm
-intitle:"DVR User Login" inurl:/login.htm
-intitle:"DVR User Login" inurl:/logon.htm
-intitle:"DVR User Login" inurl:/login.html
-intitle:"DVR User Login" inurl:/login.html
-intitle:"DVR User Login" inurl:/logon.html
-intitle:"DVR User Login" inurl:/login.asp
-intitle:"DVR User Login" inurl:/logon.asp
-intitle:"DVR User Login" inurl:/login.aspx
-intitle:"DVR User Login" inurl:/logon.aspx
-intitle:"Apache Tomcat" intext:"Apache Tomcat"
-intitle:"Tomcat Manager Application"
-intitle:"Tomcat Status" "Tomcat Web Application Manager"
-intitle:"Apache Tomcat/7.0.5" intext:"If you're seeing this, you've successfully installed Tomcat."
-intitle:"Tomcat Server Administration"
-intitle:"Tomcat Web Application Manager"
-intitle:"Tomcat" intext:"Welcome to Tomcat"
-intitle:"Apache Tomcat" intext:"Tomcat Server Administration"
-intitle:"Apache Tomcat" intext:"Tomcat Web Application Manager"
-intext:"Error 404: Not Found"
-intext:"Error 403: Forbidden"
-intext:"Error 500: Internal Server Error"
-intext:"Error 502: Bad Gateway"
-intext:"Error 503: Service Unavailable"
-intext:"Error 504: Gateway Timeout"
-intext:"Error 505: HTTP Version Not Supported"
-intext:"Error 506: Variant Also Negotiates"
-intext:"Error 507: Insufficient Storage"
-intext:"Error 508: Loop Detected"
-intext:"Error 509: Bandwidth Limit Exceeded"
-intext:"Error 510: Not Extended"
-intext:"Error 511: Network Authentication Required"
-intext:"Error 520: Unknown Error"
-intext:"Error 521: Web Server Is Down"
-intext:"Error 522: Connection Timed Out"
-intext:"Error 523: Origin Is Unreachable"
-intext:"Error 524: A Timeout Occurred"
-intext:"Error 525: SSL Handshake Failed"
-intext:"Error 526: Invalid SSL Certificate"
-intext:"Error 527: Railgun Error"
-intext:"Error 529: Site is overloaded"
-intext:"Error 530: Site is frozen"
-intext:"Error 503: Backend is unhealthy"
-intext:"Error 530: Origin DNS Error"
-filetype:gitweb inurl:git
-filetype:git "NOTICE OR LICENSE"
-filetype:git "This file is a placeholder for the README file"
-filetype:git "This file should contain a short description of the repository."
-filetype:git "This file is used to list changes made in each version of the project."
-filetype:git "This file contains important notes for the release."
-filetype:git "This file is part of the git package."
-filetype:git "This file contains release notes for the changes in each release."
-inurl:redir?url=
-inurl:url=
-inurl:redirect?url=
-inurl:link?url=
-inurl:out?url=
-inurl:to?url=
-inurl:go?url=
-inurl:redirect?url=
-inurl:open?url=
-inurl:out?url=
-inurl:leave?url=
-inurl:"/.well-known/security.txt"
-inurl:"/.well-known/security"
-inurl:"/.git/HEAD"
-inurl:"/.git/config"
-inurl:"/.git/COMMIT_EDITMSG"
-inurl:"/.git/description"
-inurl:"/.git/hooks"
-inurl:"/.git/index"
-inurl:"/.git/refs"
-inurl:"/.env"
-inurl:"/.vscode/settings.json"
-inurl:"/.vscode/extensions.json"
-inurl:"/cgi-bin/config.bin"
-inurl:"/cgi-bin/login.bin"
-inurl:"/cgi-bin/param.bin"
-inurl:"/cgi-bin/webcm"
-inurl:"/cgi-bin/wpa.cgi"
-inurl:"/cgi-bin/handler"
-inurl:"/cgi-bin/status"
-inurl:"/cgi-bin/Network"
-inurl:"/cgi-bin/admin"
-inurl:"/cgi-bin/testcgi"
-inurl:"/cgi-bin/test-cgi"
-inurl:"/cgi-bin/test"
-inurl:"/cgi-bin/php"
-inurl:"/cgi-bin/php5"
-inurl:"/cgi-bin/php4"
-inurl:"/cgi-bin/phpinfo"
-inurl:"/cgi-bin/phpinfo.php"
-inurl:"/cgi-bin/phptest.cgi"
-inurl:"/cgi-bin/test.cgi"
-inurl:"/cgi-bin/admin.cgi"
-inurl:"/cgi-bin/admin.pl"
-inurl:"/cgi-bin/test.pl"
-inurl:"/cgi-bin/test.sh"
-inurl:"/cgi-bin/status"
-inurl:"/cgi-bin/webmail.cgi"
-inurl:"/cgi-bin/php.ini"
-inurl:"/cgi-bin/.htaccess"
-inurl:"/cgi-bin/phpinfo.php"
-inurl:"/cgi-bin/db.cgi"
-inurl:"/cgi-bin/db.pl"
-inurl:"/cgi-bin/sql.cgi"
-inurl:"/cgi-bin/sqlite.cgi"
-inurl:"/cgi-bin/db.php"
-inurl:"/cgi-bin/db.pl"
-inurl:"/cgi-bin/db2.cgi"
-inurl:"/cgi-bin/dbtest.cgi"
-inurl:"/cgi-bin/dbsql.cgi"
-inurl:"/cgi-bin/dbsql.pl"
-inurl:"/cgi-bin/mysql.cgi"
-inurl:"/cgi-bin/mysql.pl"
-inurl:"/cgi-bin/mysqlmanager.cgi"
-inurl:"/cgi-bin/mysqlmanager.pl"
-inurl:"/cgi-bin/mydb.cgi"
-inurl:"/cgi-bin/oracle.cgi"
-inurl:"/cgi-bin/dbconnect.cgi"
-inurl:"/cgi-bin/mysqldb.cgi"
-inurl:"/cgi-bin/websql.cgi"
-inurl:"/cgi-bin/webdb.cgi"
-inurl:"/cgi-bin/webdb2.cgi"
-inurl:"/cgi-bin/webdbtest.cgi"
-inurl:"/cgi-bin/acsscheduler.cgi"
-inurl:"/cgi-bin/sqwebmail"
-inurl:"/cgi-bin/w3-msql"
-inurl:"/cgi-bin/dataweb"
-inurl:"/cgi-bin/jam.pl"
-inurl:"/cgi-bin/jamcgi"
-inurl:"/cgi-bin/jamweb.cgi"
-inurl:"/cgi-bin/jamtest.cgi"
-inurl:"/cgi-bin/jamsql.cgi"
-inurl:"/cgi-bin/sqldata"
-inurl:"/cgi-bin/sqldb"
-inurl:"/cgi-bin/sqlweb"
-inurl:"/cgi-bin/sqlcgi"
-inurl:"/cgi-bin/sqltest"
-inurl:"/cgi-bin/sqlshell"
-inurl:"/cgi-bin/sqlsh"
-inurl:"/cgi-bin/lsdb"
-inurl:"/cgi-bin/lsdb2"
-inurl:"/cgi-bin/xsql"
-inurl:"/cgi-bin/xsql2"
-inurl:"/cgi-bin/webcgi"
-inurl:"/cgi-bin/pagelog.cgi"
-inurl:"/cgi-bin/getlog.cgi"
-inurl:"/cgi-bin/testlog.cgi"
-inurl:"/cgi-bin/logs.cgi"
-inurl:"/cgi-bin/weblogs"
-inurl:"/cgi-bin/testlogs"
-inurl:/wp-admin
-inurl:/wp-login
-inurl:/wp-content
-inurl:/wp-includes
-inurl:/xmlrpc.php
-inurl:/readme.html
-inurl:/license.txt
-inurl:/wp-json
-inurl:/wp-trackback
-inurl:/wp-xmlrpc
-inurl:/wp-links-opml
-inurl:/wp-comments-post
-inurl:/wp-feed
-inurl:/wp-mail
-inurl:/wp-rss
-inurl:/wp-tag
-inurl:/wp-embed
-inurl:/wp-login.php?action=register
-intitle:"FTP root at"
-intitle:"FTP Server" inurl:/ftp
-intitle:"Index of /ftp"
-intitle:"Index of /" "FTP root"
-intitle:"Index of /" inurl:/ftp
-filetype:conf inurl:web.config
-filetype:conf inurl:httpd.conf
-filetype:conf inurl:php.ini
-filetype:conf inurl:my.cnf
-filetype:conf inurl:config.inc.php
-filetype:conf inurl:config.php
-filetype:conf inurl:settings.php
-filetype:conf inurl:application.properties
-filetype:conf inurl:application.yml
-filetype:conf inurl:database.yml
-filetype:conf inurl:connectionStrings.config
-filetype:conf inurl:settings.xml
-filetype:conf inurl:connections.xml
-filetype:php inurl:info
-filetype:php inurl:phpinfo
-filetype:txt inurl:wp-config
-filetype:sql "WordPress" "backup"
-filetype:log inurl:wp-content/install.php
-filetype:log inurl:wp-content/upgrade-log.php
-filetype:log "PHP Fatal error" OR "PHP Parse error" OR "PHP Warning" OR "PHP Error"
-filetype:log "login" "password"
-filetype:log "username" "password"
-filetype:log "user" "pass"
-filetype:log "secret_key"
-filetype:log "password"
-intitle:"Index of /" + "backup"
-filetype:pem intext:PRIVATE KEY
-filetype:env intext:AWS_SECRET_ACCESS_KEY
-inurl:"/uc?id="
-filetype:log inurl:apache.log
-filetype:log inurl:nginx.log
-filetype:doc OR filetype:docx OR filetype:xls OR filetype:xlsx OR filetype:ppt OR filetype:pptx
-intitle:"Index of" (doc|docx|xls|xlsx|ppt|pptx)
-filetype:txt "username" AND "password"
-filetype:txt "user" AND "pass"
-filetype:log "login: *" AND "password: *"
-intitle:"Ubiquiti" intext:"EdgeRouter"
-intitle:"Ubiquiti" intext:"EdgeMax"
-intitle:"Ubiquiti" intext:"UniFi Controller"
-intitle:"MikroTik" intext:"RouterOS"
-intitle:"Index of /" "Parent Directory"
-intitle:"Index of /" "Last modified"
-intitle:"Index of /" "Name"
-intitle:"Index of /" "Size"
-intitle:"Index of /" "Description"
-intitle:"Index of /" "Modified"
-intitle:"Index of /" "Parent Directory"
-intitle:"Index of /" "Windows 2003 Server"
-inurl:"redirect?to="
-inurl:"out?to="
-inurl:"go?to="
-inurl:"to?url="
-inurl:"link?to="
-inurl:"url?url="
-inurl:"redir?url="
-filetype:zip "wp-content"
-inurl:/mongodb/port
-intext:"-- phpMyAdmin SQL Dump"
-intext:"-- PostgreSQL database dump"
-intext:"-- Oracle SQL Dump"
-intext:"-- Dumping data for table"
-intitle:"FileZilla Server"
-inurl:"9200/_cat/indices"
-inurl:"27017"
-inurl:"6379"
-inurl:"11211"
-inurl:"5800" OR inurl:"5900"
-inurl:"3389"
-inurl:"23"
-inurl:"161"
-inurl:"3306"
-inurl:"5432"
-inurl:"873"
-inurl:"9200"
-intext:"Dashboard [Jenkins]"
-filetype:git "Repository"
-filetype:git "Index of /"
-filetype:env "MAIL_USERNAME"
-filetype:env "MAIL_PASSWORD"
-filetype:env "DB_USERNAME"
-filetype:env "DB_PASSWORD"
-filetype:env "SECRET_KEY"
-filetype:sql "wp-config" "Backup"
-filetype:zip "wp-content" "backup"
-inurl:/wp-content/plugins/ "index of /"
-filetype:txt inurl:configuration.php
-intitle:"Index of /" + "admin"
-intitle:"Index of /" + "backup"
-intitle:"Index of /" + "logs"
-intitle:"Index of /" + "config"
-intitle:"Index of /" + "database"
-intitle:"Index of /" + "passwd"
-intitle:"Index of /" + "phpmyadmin"
-intitle:"Index of /" + "wp-admin"
-intitle:"Index of /" + "wp-content"
-intitle:"Index of /" + "wp-includes"
-intitle:"Index of /" + "uploads"
-filetype:pdf "Confidential"
-filetype:pdf "Internal Use Only"
-filetype:pdf "Not for Distribution"
-filetype:doc "Confidential"
-filetype:doc "Internal Use Only"
-filetype:doc "Not for Distribution"
-filetype:xls "Confidential"
-filetype:xls "Internal Use Only"
-filetype:xls "Not for Distribution"
-filetype:key inurl:ssh
-filetype:ini "FTP" "password"
-filetype:ini "FTP" "username"
-filetype:txt "password"
-intitle:"Powered by WordPress"
-intitle:"Powered by Joomla"
-intitle:"Powered by Drupal"
-intitle:"Powered by Magento"
-intitle:"Powered by vBulletin"
-intitle:"Powered by phpBB"
-intitle:"Powered by MediaWiki"
-intitle:"Powered by ExpressionEngine"
-intitle:"Powered by Blogger"
-intitle:"Powered by TYPO3"
-inurl:/camera/view
-inurl:/view.shtml
-inurl:/view/index.shtml
-inurl:/axis-cgi/mjpg
-inurl:/control/userimage.html
-inurl:/control/faststream.htm
-inurl:/index/blink.cgi
-filetype:log "access.log"
-filetype:bkf "Microsoft's Backup Utility"
-filetype:json "api_key"
-filetype:conf inurl:apache2.conf
-filetype:conf inurl:httpd.conf
-filetype:conf inurl:nginx.conf
-intext:"Error Message" ext:log
-intitle:"PHP Version" inurl:/info.php
-intitle:"Proxy Lists"
-inurl:printer/config
-filetype:json "auths"
-filetype:sql "MySQL dump"
-intitle:"Live WebCam" inurl:/index.html
-filetype:xml "Jira" "backup"
-filetype:ini "database"
-filetype:json "AWS_ACCESS_KEY"
-filetype:git "config"
-filetype:sql "password" "CREATE USER"
-filetype:xml "config"
-intitle:"Openstack Dashboard"
-filetype:xml "Configuration"
-filetype:js "password"
-filetype:yaml "mongodb"
-filetype:xml "jenkins"
-filetype:zip "wp-content"
-filetype:json "wp-config"
-filetype:xml "password"
-filetype:sql intext:username password
-filetype:sql "insert into" (pass|passwd|password)
-filetype:sql "values" "username" "password"
-filetype:sql "VALUES" "username" "password"
-filetype:sql "CREATE USER" username identified by password
-filetype:sql "CREATE USER" username identified by "password"
-filetype:sql "CREATE USER" username identified by 'password'
-filetype:sql "CREATE USER" username identified by PASSWORD
-filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"%"
-filetype:sql "GRANT ALL PRIVILEGES" ON database.* TO "username"@"localhost"
-filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"%"
-filetype:sql "GRANT ALL PRIVILEGES" ON *.* TO "username"@"localhost"
-filetype:env intext:API_KEY
-filetype:conf inurl:apache2.conf
-filetype:conf inurl:httpd.conf
-filetype:conf inurl:nginx.conf
-filetype:json inurl:config.json
-filetype:json inurl:settings.json
-filetype:json inurl:configuration.json
-filetype:json inurl:credentials.json
-filetype:json inurl:keys.json
-filetype:json inurl:secrets.json
-filetype:json inurl:auth.json
-filetype:log inurl:logs/access.log
-filetype:log inurl:logs/error.log
-filetype:bkf OR filetype:bkp OR filetype:bak OR filetype:old OR filetype:backup
-filetype:json OR filetype:yaml OR filetype:yml "Dockerfile"
-filetype:xls "password"
-filetype:xls "login"
-filetype:xls "credentials"
-filetype:log inurl:logs/access.log
-filetype:log inurl:logs/error.log
-filetype:bkf OR filetype:bkp OR filetype:bak OR filetype:old OR filetype:backup
-filetype:json OR filetype:yaml OR filetype:yml "Dockerfile"
-filetype:xls "password"
-filetype:xls "login"
-filetype:xls "credentials"
-filetype:zip inurl:wp-content/backup
-filetype:tar inurl:wp-content/backup
-filetype:rar inurl:wp-content/backup
-filetype:sql inurl:wp-config.bak
-filetype:sql inurl:wp-config.php.bak
-filetype:conf inurl:redis.conf
-filetype:conf inurl:redis.conf.default
-filetype:conf inurl:redis.conf.bak
-filetype:yaml inurl:elasticsearch.yml
-filetype:yaml inurl:elasticsearch.yaml
-filetype:yaml inurl:elasticsearch.yml.bak
-filetype:yaml inurl:elasticsearch.yaml.bak
-filetype:conf inurl:mongodb.conf
-filetype:conf inurl:mongo.conf
-filetype:conf inurl:mongod.conf
-filetype:conf inurl:mongos.conf
-filetype:xml inurl:jenkins.xml
-filetype:xml inurl:config.xml
-filetype:xml inurl:credentials.xml
-filetype:xml inurl:hudson.util.Secret
-filetype:json inurl:jupyter_notebook_config.json
-filetype:json inurl:jupyterhub_config.json
-filetype:py inurl:settings.py
-filetype:env inurl:.env
-filetype:yaml OR filetype:yml inurl:gitlab-ci.yml
-filetype:json inurl:gitlab-secrets.json
-filetype:conf inurl:svnserve.conf
-filetype:conf inurl:svnauthz
-filetype:conf inurl:hgrc
-filetype:xml inurl:hive-site.xml
-filetype:yaml inurl:cassandra.yaml
-filetype:yaml inurl:cassandra-env.sh
-inurl:"apikey" OR inurl:"api-key" OR inurl:"api_key"
-inurl:"jwt_token" OR inurl:"jwt-token"
-inurl:"_cat/health"
-inurl:"_cat/nodes"
-inurl:"_cat/indices"
-inurl:"/info"
-inurl:"/solr" OR inurl:"/solr/admin"
-inurl:"/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/"
-intitle:"phpMyAdmin" inurl:/index.php
-intitle:"OpenCV Admin Panel" inurl:/admin
-intitle:"Pi-hole Admin Console" inurl:/admin
-intitle:"Minecraft Server Admin Panel" inurl:/admin
-intitle:"Linksys Router Admin Panel" inurl:/admin
-intitle:"VPN Admin Panel" inurl:/admin
-intitle:"Firewall Admin Panel" inurl:/admin
-intitle:"VoIP Admin Panel" inurl:/admin
-intitle:"NAS Admin Panel" inurl:/admin
-intitle:"Router Admin Panel" inurl:/admin
-intitle:"Network Camera" inurl:/liveview
-intitle:"IP Camera Viewer" inurl:/stream
-intitle:"Live Stream - powered by Tightrope Media Systems"
-intitle:"Printer Status" inurl:/printer
-intitle:"Printer Configuration" inurl:/printer
-intitle:"Printer Management" inurl:/printer
-intitle:"Printer Configuration" inurl:/ipp
-intitle:"Printer Configuration" inurl:/ipp
-intitle:"Printer Status" inurl:/ipp
-intitle:"Printer Management" inurl:/ipp
-intitle:"CUPS" intext:"Printer configuration" inurl:/admin
-intitle:"Security Camera Viewer" inurl:/live
-intitle:"Surveillance Camera" inurl:/view
-intitle:"Surveillance System" inurl:/live-feed
-intitle:"Camera Live View" inurl:/cam
-intitle:"Index of /credentials"
-intitle:"Index of /database-backup"
-intitle:"Index of /server-config"
-filetype:log "Application Error" OR "Exception" OR "Fatal Error"
-filetype:log "Access Denied" OR "Unauthorized"
-filetype:log "SQL Error" OR "Database Error"
-filetype:log "404 Not Found" OR "Page Not Found"
-filetype:log "Stack Trace" OR "Traceback"
-filetype:env intext:"API_KEY"
-filetype:env intext:"SECRET_KEY"
-filetype:env intext:"DATABASE_PASSWORD"
-filetype:env intext:"ADMIN_PASSWORD"
-filetype:env intext:"JWT_SECRET_KEY"
-filetype:zip OR filetype:tar.gz OR filetype:tar intext:"/backup/"
-intitle:"Welcome to phpMyAdmin" AND "Not Found" AND "Error 404"
-intitle:"Index of /phpMyAdmin" AND "Forbidden" AND "Error 403"
-intitle:"Apache2 Debian Default Page: It works" AND "Error 404"
-intitle:"Apache HTTP Server Test Page powered by CentOS" AND "Error 404"
-intitle:"NVR Login" inurl:/login.htm
-intitle:"NVR User Login" inurl:/login.htm
-intitle:"NVR User Login" inurl:/logon.htm
-intitle:"NVR User Login" inurl:/login.html
-intitle:"NVR User Login" inurl:/login.html
-intitle:"NVR User Login" inurl:/logon.html
-intitle:"NVR User Login" inurl:/login.asp
-intitle:"NVR User Login" inurl:/logon.asp
-intitle:"NVR User Login" inurl:/login.aspx
-intitle:"NVR User Login" inurl:/logon.aspx
-intitle:"Index of /config-backup"
-intitle:"Index of /uploads-private"
-intitle:"Index of /logs-sensitive"
-intitle:"Welcome to phpMyAdmin" AND "Not Found" AND "Error 404"
-intitle:"Index of /phpMyAdmin" AND "Forbidden" AND "Error 403"
-intitle:"Apache2 Debian Default Page: It works" AND "Error 404"
-intitle:"Apache HTTP Server Test Page powered by CentOS" AND "Error 404"
-intitle:"Apache2 Ubuntu Default Page: It works" AND "Error 404"
-intitle:"Welcome to nginx!" AND "Error 404"
-intitle:"Index of /" "Parent Directory" "Error 403"
-intitle:"Index of /" "Parent Directory" "Error 404"
-intitle:"Index of /" "Parent Directory" "Error 403" "Forbidden"
-intitle:"Index of /" "Parent Directory" "Error 404" "Not Found"
-intitle:"Test Page for the Apache HTTP Server" "It Worked!"
-intitle:"Test Page for the Nginx HTTP Server" "Welcome to nginx!"
-intitle:"Test Page for the Apache Web Server on Fedora" "Fedora Core Test Page"
-intitle:"Apache Status" "Server Version: Apache"
-intitle:"Test Page for the Apache HTTP Server on Fedora Core"
-intitle:"Index of /" "CentOS" "Test Page"
-intitle:"Index of /" "Apache/2.2.3 (CentOS)"
-intitle:"Index of /" "Apache/2.2.3 (Ubuntu)"
-intitle:"Index of /" "Apache/2.2.3 (Red Hat)"
-intitle:"Index of /" "Apache/2.2.3 (Fedora)"
-intitle:"Router Login" inurl:/login.htm
-inurl:/search.php?q=
-inurl:s3.amazonaws.com
-filetype:json "wordpress"
-filetype:xml inurl:app/etc/local.xml
-intitle:"Elasticsearch" intext:"You Know, for Search"
-filetype:git "password"
-intitle:"Dashboard [Jenkins]" inurl:/view
-intitle:"Redis" intext:"Authentication required"
-intitle:"MongoDB" intext:"Error Page"
-inurl:/owasp
-intitle:"Apache Tomcat" intext:"Tomcat Web Application Manager"
-inurl:redirect?to=
-inurl:/search?q=<script>alert(1)</script>
-intitle:"500 Internal Server Error"
-inurl:/api/v1
-intitle:"phpMyAdmin" "Welcome to phpMyAdmin"
-intitle:"Jupyter Notebook" inurl:/tree
-intitle:"Grafana - Sign In" inurl:/login
-inurl:"/vulnerable_app"
-inurl:/api/v1
-inurl:/api/v2
-inurl:/api/v3
-inurl:/api/v1/*.*
-inurl:/api/v2/*.*
-inurl:/api/v3/*.*
-intitle:"Index of /.git"
-intitle:"Index of /git"
-intitle:"Index of /s3"
-intitle:"Index of /s3bucket"
-filetype:bkf "Microsoft Backup"
-filetype:bkp "Backup" OR "Bak" OR "BKP"
-filetype:ini "password"
-filetype:conf "password"
-filetype:cfg "password"
-filetype:config "password"
-filetype:sql "database"
-filetype:sql "backup"
-filetype:sql "bak"
-intext:"password" AND "public static final"
-intext:"password" AND "private static final"
-intext:"password" AND "public String"
-intext:"password" AND "private String"
-filetype:json "aws_access_key"
-filetype:json "aws_secret_access_key"
-filetype:json "api_key"
-filetype:json "api_secret_key"
-filetype:json "api_access_key"
-filetype:json "api_token"
-filetype:pem "PRIVATE KEY"
-filetype:key "BEGIN RSA PRIVATE KEY"
-filetype:pfx "Certificate"
-intext:"eval($_POST['shell'])"
-filetype:xml "CMS Configuration"
-filetype:xml "CMS Settings"
-intitle:"Index of /backup" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
-intitle:"Index of /ipp" AND (filetype:conf OR filetype:config OR filetype:backup OR filetype:bkp)
-intitle:"Index of /fw" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
-intitle:"Index of /cam-config" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
-intitle:"Index of /iot" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
-intitle:"Index of /switch-config" AND (filetype:cfg OR filetype:conf OR filetype:backup OR filetype:bkp)
-filetype:git inurl:/.git
-filetype:svn inurl:/viewvc
-filetype:hg inurl:.hg
-filetype:pserver inurl:/CVS
-filetype:code-workspace inurl:/.vscode
-intitle:"Welcome to JBoss" intext:"Username" intext:"Password"
-intitle:"Dashboard [Jenkins]"
-intitle:"Welcome to Jenkins!"
-intitle:"Login - JIRA" AND "Powered by Atlassian JIRA"
-intitle:"Microsoft SQL Server Web Administration"
-intitle:"Redis key-value store in production" intext:"redis_version"
-intitle:"MongoDB Status" intext:"MongoDB Server Status"
-intitle:"Elastic Cluster Overview" intext:"You Know, for Search"
-intitle:"Welcome to Solr" intext:"Solr Admin"
-intitle:"RabbitMQ Management" intext:"RabbitMQ Management"
-intitle:"Kubernetes Dashboard"
-intitle:"Grafana -" intext:"Welcome to Grafana"
-intitle:"Index of /backup" inurl:/mongodb
-intitle:"Index of /backup" inurl:/elasticsearch
-filetype:ini "Host" AND "Username" AND "Password" AND "Port" inurl:ftp
-filetype:key inurl:ssh
-filetype:env OR filetype:ini OR filetype:cfg OR filetype:config inurl:/config/
-filetype:sql "INSERT INTO" "VALUES" "WordPress" inurl:/wp-content/
-intitle:"phpMyAdmin" AND "Welcome to phpMyAdmin"
-filetype:php "Index of /src/" OR "Index of /source/" OR "Index of /code/"
-inurl:"file.php?id="
-inurl:"page.php?id="
-inurl:"view.php?id="
-inurl:"content.php?id="
-inurl:"product.php?id="
-inurl:"gallery.php?id="
-inurl:"show.php?id="
-inurl:"display.php?id="
-inurl:"download.php?id="
-inurl:"article.php?id="
-inurl:"news.php?id="
-inurl:"page.php?category="
-inurl:"product.php?category="
-inurl:"view.php?item="
-inurl:"gallery.php?album="
-inurl:"show.php?article="
-inurl:"display.php?content="
-inurl:"download.php?file="
-inurl:"article.php?title="
-inurl:"news.php?article="
-
-# Category: Cross-Site Scripting (XSS) Vulnerabilities
-inurl:"search.php?q="
-inurl:"browse.php?category="
-inurl:"search.php?query="
-inurl:"results.php?search="
-inurl:"view.php?name="
-inurl:"show.php?file="
-inurl:"details.php?item="
-inurl:"content.php?article="
-inurl:"profile.php?user="
-inurl:"search.php?query="
-
-# Category: Remote Code Execution (RCE) Vulnerabilities
-inurl:"upload.php?file="
-inurl:"upload.php?filename="
-inurl:"upload.php?path="
-inurl:"upload.php?directory="
-inurl:"upload.php?data="
-inurl:"upload.php?cmd="
-inurl:"upload.php?exec="
-inurl:"upload.php?command="
-inurl:"upload.php?payload="
-inurl:"upload.php?execute="
-inurl:"change_password.php?user="
-inurl:"update_profile.php?user="
-inurl:"update_settings.php?user="
-inurl:"update_info.php?user="
-inurl:"update_account.php?user="
-inurl:"update_data.php?user="
-inurl:"change_email.php?user="
-inurl:"modify_password.php?user="
-inurl:"modify_profile.php?user="
-inurl:"modify_settings.php?user="
-inurl:"config.php"
-inurl:"database.php"
-inurl:"settings.php"
-inurl:"secrets.php"
-inurl:"credentials.php"
-inurl:"connection.php"
-inurl:"keys.php"
-inurl:"passwords.php"
-inurl:"api_key.php"
-inurl:"access_log.txt"
-inurl:"error_log.txt"
-inurl:"login.php?admin=true"
-inurl:"admin.php?access=1"
-inurl:"signin.php?admin=true"
-inurl:"admin_login.php?root=true"
-inurl:"dashboard.php?admin=true"
-inurl:"authenticate.php?admin=true"
-inurl:"access.php?admin=true"
-inurl:"auth.php?admin=true"
-inurl:"verify.php?admin=true"
-inurl:"execute.php?code="
-inurl:"run.php?code="
-inurl:"eval.php?code="
-inurl:"execute_script.php?code="
-inurl:"eval_script.php?code="
-inurl:"run_script.php?code="
-inurl:"execute_code.php?code="
-inurl:"run_code.php?code="
-inurl:"eval_code.php?code="
-inurl:"run_command.php?cmd="
-inurl:"execute_command.php?cmd="
-inurl:"command.php?exec="
-inurl:"run_shell.php?cmd="
-inurl:"execute_shell.php?cmd="
-inurl:"shell.php?command="
-inurl:"run_cmd.php?cmd="
-inurl:"execute_cmd.php?cmd="
-inurl:"cmd.php?run="
-inurl:"load_script.php?name="
-inurl:"get_script.php?file="
-inurl:"include_script.php?src="
-inurl:"import_script.php?file="
-inurl:"load_js.php?name="
-inurl:"get_js.php?file="
-inurl:"include_js.php?src="
-inurl:"import_js.php?file="
-inurl:"proxy.php?url="
-inurl:"fetch.php?url="
-inurl:"request.php?url="
-inurl:"get_url.php?url="
-inurl:"open.php?url="
-inurl:"read.php?url="
-inurl:"load.php?url="
-inurl:"access.php?url="
-inurl:"download_url.php?url="
-inurl:"upload_file.php"
-inurl:"file_upload.php"
-inurl:"upload_image.php"
-inurl:"image_upload.php"
-inurl:"upload_photo.php"
-inurl:"photo_upload.php"
-inurl:"upload_document.php"
-inurl:"document_upload.php"
-inurl:"view_file.php?file="
-inurl:"read_file.php?path="
-inurl:"display_file.php?file="
-inurl:"open_file.php?filename="
-inurl:"access_file.php?file="
-inurl:"load_file.php?filepath="
-inurl:"fetch_file.php?file="
-inurl:"download_file.php?name="
-inurl:"get_file.php?path="
-inurl:"download.php?file="
-inurl:"file_download.php?file="
-inurl:"get_file.php?file="
-inurl:"file_get.php?file="
-inurl:"fetch_file.php?name="
-inurl:"get_attachment.php?file="
-inurl:"load_attachment.php?file="
-inurl:"access.php?origin="
-inurl:"fetch.php?origin="
-inurl:"request.php?origin="
-inurl:"get_data.php?origin="
-inurl:"load_data.php?origin="
-inurl:"read_data.php?origin="
-inurl:"include.php?file="
-inurl:"require.php?file="
-inurl:"load_file.php?file="
-inurl:"read_file.php?file="
-inurl:"fetch_file.php?file="
-inurl:"open_file.php?file="
-inurl:"load_url.php?file="
-inurl:"get_url.php?file="
-inurl:"load.php?file="
-inurl:"read.php?file="
-inurl:"fetch.php?file="
-inurl:"open.php?file="
-inurl:"include.php?file="
-inurl:"require.php?file="
-inurl:"access.php?file="
-inurl:"get_file.php?file="
-inurl:"load_script.php?name="
-inurl:"get_script.php?file="
-inurl:"include_script.php?src="
-inurl:"import_script.php?file="
-inurl:"load_js.php?name="
-inurl:"get_js.php?file="
-inurl:"include_js.php?src="
-inurl:"import_js.php?file="
-inurl:"log.php?data="
-inurl:"logs.php?file="
-inurl:"error.php?message="
-inurl:"access_log.php?data="
-inurl:"debug.php?data="
-inurl:"trace.php?log="
-inurl:"audit.php?log="
-inurl:"event_log.php?message="
-inurl:"run_command.php?cmd="
-inurl:"execute_command.php?cmd="
-inurl:"command.php?exec="
-inurl:"run_shell.php?cmd="
-inurl:"execute_shell.php?cmd="
-inurl:"shell.php?command="
-inurl:"run_cmd.php?cmd="
-inurl:"execute_cmd.php?cmd="
-inurl:"cmd.php?run="
-inurl:"redirect.php?url="
-inurl:"go.php?url="
-inurl:"out.php?url="
-inurl:"leave.php?url="
-inurl:"to.php?url="
-inurl:"outgoing.php?url="
-inurl:"redirecting.php?url="
-inurl:"forward.php?url="
-inurl:"change_password.php?user="
-inurl:"update_profile.php?user="
-inurl:"update_settings.php?user="
-inurl:"update_info.php?user="
-inurl:"update_account.php?user="
-inurl:"update_data.php?user="
-inurl:"change_email.php?user="
-inurl:"modify_password.php?user="
-inurl:"modify_profile.php?user="
-inurl:"modify_settings.php?user="
-inurl:"search.php?q="
-inurl:"browse.php?category="
-inurl:"search.php?query="
-inurl:"results.php?search="
-inurl:"view.php?name="
-inurl:"show.php?file="
-inurl:"details.php?item="
-inurl:"content.php?article="
-inurl:"profile.php?user="
-inurl:"search.php?query="
-inurl:"upload_file.php"
-inurl:"file_upload.php"
-inurl:"upload_image.php"
-inurl:"image_upload.php"
-inurl:"upload_photo.php"
-inurl:"photo_upload.php"
-inurl:"upload_document.php"
-inurl:"document_upload.php"
-inurl:"download.php?file=1"
-inurl:"view.php?id=1"
-inurl:"show.php?article=1"
-inurl:"download_file.php?name=1"
-inurl:"load.php?file="
-inurl:"read.php?file="
-inurl:"fetch.php?file="
-inurl:"open.php?file="
-inurl:"include.php?file="
-inurl:"require.php?file="
-inurl:"access.php?file="
-inurl:"get_file.php?file="
-inurl:"proxy.php?url="
-inurl:"fetch.php?url="
-inurl:"request.php?url="
-inurl:"get_url.php?url="
-inurl:"open.php?url="
-inurl:"read.php?url="
-inurl:"load.php?url="
-inurl:"access.php?url="
-inurl:"download_url.php?url="
-inurl:"download.php?file="
-inurl:"file_download.php?file="
-inurl:"get_file.php?file="
-inurl:"file_get.php?file="
-inurl:"fetch_file.php?name="
-inurl:"get_attachment.php?file="
-inurl:"load_attachment.php?file="
-inurl:"process.php?xml="
-inurl:"load.php?xml="
-inurl:"upload_xml.php?data="
-inurl:"execute_xml.php?xml="
-inurl:"parse_xml.php?file="
-inurl:"fetch_xml.php?url="
-inurl:"import_xml.php?file="
-inurl:"run_command.php?cmd="
-inurl:"execute_command.php?cmd="
-inurl:"command.php?exec="
-inurl:"run_shell.php?cmd="
-inurl:"execute_shell.php?cmd="
-inurl:"shell.php?command="
-inurl:"run_cmd.php?cmd="
-inurl:"execute_cmd.php?cmd="
-inurl:"cmd.php?run="
-inurl:"test.php"
-inurl:"debug.php"
-inurl:"dev.php"
-inurl:"tmp.php"
-inurl:"backup.php"
-inurl:"config_test.php"
-inurl:"setup.php"
-inurl:"config.php.sample"
-inurl:"example.php"
-inurl:"config.php"
-inurl:"database.php"
-inurl:"settings.php"
-inurl:"secrets.php"
-inurl:"credentials.php"
-inurl:"connection.php"
-inurl:"keys.php"
-inurl:"passwords.php"
-inurl:"api_key.php"
-inurl:"access_log.txt"
-inurl:"error_log.txt"
-inurl:"login.php?admin=true"
-inurl:"admin.php?access=1"
-inurl:"signin.php?admin=true"
-inurl:"admin_login.php?root=true"
-inurl:"dashboard.php?admin=true"
-inurl:"authenticate.php?admin=true"
-inurl:"access.php?admin=true"
-inurl:"auth.php?admin=true"
-inurl:"verify.php?admin=true"
-inurl:"include.php?file="
-inurl:"require.php?file="
-inurl:"load_file.php?file="
-inurl:"read_file.php?file="
-inurl:"fetch_file.php?file="
-inurl:"open_file.php?file="
-inurl:"load_url.php?file="
-inurl:"get_url.php?file="
-inurl:"page.php?category="
-inurl:"product.php?category="
-inurl:"view.php?item="
-inurl:"gallery.php?album="
-inurl:"show.php?article="
-inurl:"display.php?content="
-inurl:"download.php?file="
-inurl:"article.php?title="
-inurl:"news.php?article="
-inurl:"view_file.php?file="
-inurl:"read_file.php?path="
-inurl:"display_file.php?file="
-inurl:"open_file.php?filename="
-inurl:"access_file.php?file="
-inurl:"load_file.php?filepath="
-inurl:"fetch_file.php?file="
-inurl:"download_file.php?name="
-inurl:"get_file.php?path="
 intitle:"DorkScan" inurl:/search
 intitle:"GHDB-ID" inurl:/exploits/
 intitle:"Google Hacking Database" inurl:/files/
@@ -6874,3 +6439,418 @@ intitle:"Index of /" + "backup"
 filetype:pem intext:PRIVATE KEY
 filetype:env intext:AWS_SECRET_ACCESS_KEY
 inurl:"/uc?id="
+inurl:home/000~ROOT~000/
+intext:美拉克 伺服系統 整合通訊 / Unified Communications
+intext:Basado en tecnología IceWarp Comunicaciones Unificadas
+intext:Basato su IceWarp Server
+intext:Tecnologia fornecida por IceWarp Server
+intext:Powered by IceWarp Czech RepublicIceWarp Mail server
+intext:Basato su Comunicazioni Integrate IceWarp
+inurl:webmail/old/?color=
+ext:php inurl:?
+admin account info" filetype:log
+!Host=*.* intext:enc_UserPassword=* ext:pcf
+"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" inurl:service.pwd
+"AutoCreate=TRUE password=*"
+"http://*:*@www" domainname
+"index of/" "ws_ftp.ini" "parent directory"
+"liveice configuration file" ext:cfg -site:sourceforge.net
+"parent directory" +proftpdpasswd
+Duclassified" -site:duware.com "DUware All Rights reserved"
+duclassmate" -site:duware.com
+Dudirectory" -site:duware.com
+dudownload" -site:duware.com
+Elite Forum Version *.*"
+Link Department"
+"sets mode: +k"
+"your password is" filetype:log
+DUpaypal" -site:duware.com
+allinurl: admin mdb
+auth_user_file.txt
+config.php
+eggdrop filetype:user user
+enable password | secret "current configuration" -intext:the
+etc (index.of)
+ext:asa | ext:bak intext:uid intext:pwd -"uid..pwd" database | server | dsn
+ext:inc "pwd=" "UID="
+ext:ini eudora.ini
+ext:ini Version=4.0.0.4 password
+ext:passwd -intext:the -sample -example
+ext:txt inurl:unattend.txt
+ext:yml database inurl:config
+filetype:bak createobject sa
+filetype:bak inurl:"htaccess|passwd|shadow|htusers"
+filetype:cfg mrtg "target
+filetype:cfm "cfapplication name" password
+filetype:conf oekakibbs
+filetype:conf slapd.conf
+filetype:config config intext:appSettings "User ID"
+filetype:dat "password.dat"
+filetype:dat inurl:Sites.dat
+filetype:dat wand.dat
+filetype:inc dbconn
+filetype:inc intext:mysql_connect
+filetype:inc mysql_connect OR mysql_pconnect
+filetype:inf sysprep
+filetype:ini inurl:"serv-u.ini"
+filetype:ini inurl:flashFXP.ini
+filetype:ini ServUDaemon
+filetype:ini wcx_ftp
+filetype:ini ws_ftp pwd
+filetype:ldb admin
+filetype:log "See `ipsec --copyright"
+filetype:log inurl:"password.log"
+filetype:mdb inurl:users.mdb
+filetype:mdb wwforum
+filetype:netrc password
+filetype:pass pass intext:userid
+filetype:pem intext:private
+filetype:properties inurl:db intext:password
+filetype:pwd service
+filetype:pwl pwl
+filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"
+filetype:reg reg +intext:Ã¢? WINVNC3Ã¢?
+filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS
+filetype:sql "insert into" (pass|passwd|password)
+filetype:sql ("values * MD5" | "values * password" | "values * encrypt")
+filetype:sql +"IDENTIFIED BY" -cvs
+filetype:sql password
+filetype:url +inurl:"ftp://" +inurl:";@"
+filetype:xls username password email
+htpasswd
+htpasswd / htgroup
+htpasswd / htpasswd.bak
+intext:"enable password 7"
+intext:"enable secret 5 $"
+intext:"EZGuestbook"
+intext:"Web Wiz Journal"
+intitle:"index of" intext:connect.inc
+intitle:"index of" intext:globals.inc
+intitle:"Index of" passwords modified
+intitle:"Index of" sc_serv.conf sc_serv content
+intitle:"phpinfo()" +"mysql.default_password" +"Zend s?ri?ting Language Engine"
+intitle:dupics inurl:(add.asp | default.asp | view.asp | voting.asp) -site:duware.com
+intitle:index.of administrators.pwd
+intitle:Index.of etc shadow
+intitle:index.of intext:"secring.skr"|"secring.pgp"|"secring.bak"
+intitle:rapidshare intext:login
+inurl:"calendars?ri?t/users.txt"
+inurl:"editor/list.asp" | inurl:"database_editor.asp" | inurl:"login.asa" "are set"
+inurl:"GRC.DAT" intext:"password"
+inurl:"Sites.dat"+"PASS="
+inurl:"slapd.conf" intext:"credentials" -manpage -"Manual Page" -man: -sample
+inurl:"slapd.conf" intext:"rootpw" -manpage -"Manual Page" -man: -sample
+inurl:"wvdial.conf" intext:"password"
+inurl:/db/main.mdb
+inurl:/wwwboard
+inurl:/yabb/Members/Admin.dat
+inurl:ccbill filetype:log
+inurl:cgi-bin inurl:calendar.cfg
+inurl:chap-secrets -cvs
+inurl:config.php dbuname dbpass
+inurl:filezilla.xml -cvs
+inurl:lilo.conf filetype:conf password -tatercounter2000 -bootpwd -man
+inurl:nuke filetype:sql
+inurl:ospfd.conf intext:password -sample -test -tutorial -download
+inurl:pap-secrets -cvs
+inurl:pass.dat
+inurl:perform filetype:ini
+inurl:perform.ini filetype:ini
+inurl:secring ext:skr | ext:pgp | ext:bak
+inurl:server.cfg rcon password
+inurl:ventrilo_srv.ini adminpassword
+inurl:vtund.conf intext:pass -cvs
+inurl:zebra.conf intext:password -sample -test -tutorial -download
+LeapFTP intitle:"index.of./" sites.ini modified
+master.passwd
+mysql history files
+NickServ registration passwords
+passlist
+passlist.txt (a better way)
+passwd
+passwd / etc (reliable)
+people.lst
+psyBNC config files
+pwd.db
+server-dbs "intitle:index of"
+signin filetype:url
+spwd.db / passwd
+trillian.ini
+wwwboard WebAdmin inurl:passwd.txt wwwboard|webadmin
+[WFClient] Password= filetype:ica
+intitle:"remote assessment" OpenAanval Console
+intitle:opengroupware.org "resistance is obsolete" "Report Bugs" "Username" "password"
+"bp blog admin" intitle:login | intitle:admin -site:johnny.ihackstuff.com
+"Emergisoft web applications are a part of our"
+"Establishing a secure Integrated Lights Out session with" OR intitle:"Data Frame - Browser not HTTP 1.1 compatible" OR intitle:"HP Integrated Lights-
+"HostingAccelerator" intitle:"login" +"Username" -"news" -demo
+"iCONECT 4.1 :: Login"
+"IMail Server Web Messaging" intitle:login
+"inspanel" intitle:"login" -"cannot" "Login ID" -site:inspediumsoft.com
+"intitle:3300 Integrated Communications Platform" inurl:main.htm
+"Login - Sun Cobalt RaQ"
+"login prompt" inurl:GM.cgi
+"Login to Usermin" inurl:20000
+"Microsoft CRM : Unsupported Browser Version"
+"OPENSRS Domain Management" inurl:manage.cgi
+"pcANYWHERE EXPRESS Java Client"
+"Please authenticate yourself to get access to the management interface"
+"please log in"
+"Please login with admin pass" -"leak" -sourceforge
+CuteNews" "2003..2005 CutePHP"
+DWMail" password intitle:dwmail
+Merak Mail Server Software" -.gov -.mil -.edu -site:merakmailserver.com
+Midmart Messageboard" "Administrator Login"
+Monster Top List" MTL numrange:200-
+UebiMiau" -site:sourceforge.net
+"site info for" "Enter Admin Password"
+"SquirrelMail version" "By the SquirrelMail development Team"
+"SysCP - login"
+"This is a restricted Access Server" "Javas?ri?t Not Enabled!"|"Messenger Express" -edu -ac
+"This section is for Administrators only. If you are an administrator then please"
+"ttawlogin.cgi/?action="
+"VHCS Pro ver" -demo
+"VNC Desktop" inurl:5800
+"Web-Based Management" "Please input password to login" -inurl:johnny.ihackstuff.com
+"WebExplorer Server - Login" "Welcome to WebExplorer Server"
+"WebSTAR Mail - Please Log In"
+"You have requested access to a restricted area of our website. Please authenticate yourself to continue."
+"You have requested to access the management functions" -.edu
+(intitle:"Please login - Forums
+UBB.threads")|(inurl:login.php "ubb")
+(intitle:"Please login - Forums
+WWWThreads")|(inurl:"wwwthreads/login.php")|(inurl:"wwwthreads/login.pl?Cat=")
+(intitle:"rymo Login")|(intext:"Welcome to rymo") -family
+(intitle:"WmSC e-Cart Administration")|(intitle:"WebMyStyle e-Cart Administration")
+(inurl:"ars/cgi-bin/arweb?O=0" | inurl:arweb.jsp) -site:remedy.com -site:mil
+4images Administration Control Panel
+allintitle:"Welcome to the Cyclades"
+allinurl:"exchange/logon.asp"
+allinurl:wps/portal/ login
+ASP.login_aspx "ASP.NET_SessionId"
+CGI:IRC Login
+ext:cgi intitle:"control panel" "enter your owner password to continue!"
+ez Publish administration
+filetype:php inurl:"webeditor.php"
+filetype:pl "Download: SuSE Linux Openexchange Server CA"
+filetype:r2w r2w
+intext:""BiTBOARD v2.0" BiTSHiFTERS Bulletin Board"
+intext:"Fill out the form below completely to change your password and user name. If new username is left blank, your old one will be assumed." -edu
+intext:"Mail admins login here to administrate your domain."
+intext:"Master Account" "Domain Name" "Password" inurl:/cgi-bin/qmailadmin
+intext:"Master Account" "Domain Name" "Password" inurl:/cgi-bin/qmailadmin
+intext:"Storage Management Server for" intitle:"Server Administration"
+intext:"Welcome to" inurl:"cp" intitle:"H-SPHERE" inurl:"begin.html" -Fee
+intext:"vbulletin" inurl:admincp
+intitle:"*- HP WBEM Login" | "You are being prompted to provide login account information for *" | "Please provide the information requested and press
+intitle:"Admin Login" "admin login" "blogware"
+intitle:"Admin login" "Web Site Administration" "Copyright"
+intitle:"AlternC Desktop"
+intitle:"Athens Authentication Point"
+intitle:"b2evo > Login form" "Login form. You must log in! You will have to accept cookies in order to log in" -demo -site:b2evolution.net
+intitle:"Cisco CallManager User Options Log On" "Please enter your User ID and Password in the spaces provided below and click the Log On button to co
+intitle:"ColdFusion Administrator Login"
+intitle:"communigate pro * *" intitle:"entrance"
+intitle:"Content Management System" "user name"|"password"|"admin" "Microsoft IE 5.5" -mambo
+intitle:"Content Management System" "user name"|"password"|"admin" "Microsoft IE 5.5" -mambo
+intitle:"Dell Remote Access Controller"
+intitle:"Docutek ERes - Admin Login" -edu
+intitle:"Employee Intranet Login"
+intitle:"eMule *" intitle:"- Web Control Panel" intext:"Web Control Panel" "Enter your password here."
+intitle:"ePowerSwitch Login"
+intitle:"eXist Database Administration" -demo
+intitle:"EXTRANET * - Identification"
+intitle:"EXTRANET login" -.edu -.mil -.gov
+intitle:"EZPartner" -netpond
+intitle:"Flash Operator Panel" -ext:php -wiki -cms -inurl:asternic -inurl:sip -intitle:ANNOUNCE -inurl:lists
+intitle:"i-secure v1.1" -edu
+intitle:"Icecast Administration Admin Page"
+intitle:"iDevAffiliate - admin" -demo
+intitle:"ISPMan : Unauthorized Access prohibited"
+intitle:"ITS System Information" "Please log on to the SAP System"
+intitle:"Kurant Corporation StoreSense" filetype:bok
+intitle:"ListMail Login" admin -demo
+intitle:"Login -
+Easy File Sharing Web Server"
+intitle:"Login Forum
+AnyBoard" intitle:"If you are a new user:" intext:"Forum
+AnyBoard" inurl:gochat -edu
+intitle:"Login to @Mail" (ext:pl | inurl:"index") -dwaffleman
+intitle:"Login to Cacti"
+intitle:"Login to the forums - @www.aimoo.com" inurl:login.cfm?id=
+intitle:"MailMan Login"
+intitle:"Member Login" "NOTE: Your browser must have cookies enabled in order to log into the site." ext:php OR ext:cgi
+intitle:"Merak Mail Server Web Administration" -ihackstuff.com
+intitle:"microsoft certificate services" inurl:certsrv
+intitle:"MikroTik RouterOS Managing Webpage"
+intitle:"MX Control Console" "If you can't remember"
+intitle:"Novell Web Services" "GroupWise" -inurl:"doc/11924" -.mil -.edu -.gov -filetype:pdf
+intitle:"Novell Web Services" intext:"Select a service and a language."
+intitle:"oMail-admin Administration - Login" -inurl:omnis.ch
+intitle:"OnLine Recruitment Program - Login"
+intitle:"Philex 0.2*" -s?ri?t -site:freelists.org
+intitle:"PHP Advanced Transfer" inurl:"login.php"
+intitle:"php icalendar administration" -site:sourceforge.net
+intitle:"php icalendar administration" -site:sourceforge.net
+intitle:"phpPgAdmin - Login" Language
+intitle:"PHProjekt - login" login password
+intitle:"please login" "your password is *"
+intitle:"Remote Desktop Web Connection" inurl:tsweb
+intitle:"SFXAdmin - sfx_global" | intitle:"SFXAdmin - sfx_local" | intitle:"SFXAdmin - sfx_test"
+intitle:"SHOUTcast Administrator" inurl:admin.cgi
+intitle:"site administration: please log in" "site designed by emarketsouth"
+intitle:"Supero Doctor III" -inurl:supermicro
+intitle:"SuSE Linux Openexchange Server" "Please activate Javas?ri?t!"
+intitle:"teamspeak server-administration
+intitle:"Tomcat Server Administration"
+intitle:"TOPdesk ApplicationServer"
+intitle:"TUTOS Login"
+intitle:"TWIG Login"
+intitle:"vhost" intext:"vHost . 2000-2004"
+intitle:"Virtual Server Administration System"
+intitle:"VisNetic WebMail" inurl:"/mail/"
+intitle:"VitalQIP IP Management System"
+intitle:"VMware Management Interface:" inurl:"vmware/en/"
+intitle:"VNC viewer for Java"
+intitle:"web-cyradm"|"by Luc de Louw" "This is only for authorized users" -tar.gz -site:web-cyradm.org
+intitle:"WebLogic Server" intitle:"Console Login" inurl:console
+intitle:"Welcome Site/User Administrator" "Please select the language" -demos
+intitle:"Welcome to Mailtraq WebMail"
+intitle:"welcome to netware *" -site:novell.com
+intitle:"WorldClient" intext:"? (2003|2004) Alt-N Technologies."
+intitle:"xams 0.0.0..15 - Login"
+intitle:"XcAuctionLite" | "DRIVEN BY XCENT" Lite inurl:admin
+intitle:"XMail Web Administration Interface" intext:Login intext:password
+intitle:"Zope Help System" inurl:HelpSys
+intitle:"ZyXEL Prestige Router" "Enter password"
+intitle:"inc. vpn 3000 concentrator"
+intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
+intitle:asterisk.management.portal web-access
+intitle:endymion.sak?.mail.login.page | inurl:sake.servlet
+intitle:Group-Office "Enter your username and password to login"
+intitle:ilohamail "
+IlohaMail"
+intitle:ilohamail intext:"Version 0.8.10" "
+IlohaMail"
+intitle:IMP inurl:imp/index.php3
+intitle:Login * Webmailer
+intitle:Login intext:"RT is ? Copyright"
+intitle:Node.List Win32.Version.3.11
+intitle:Novell intitle:WebAccess "Copyright *-* Novell, Inc"
+intitle:open-xchange inurl:login.pl
+intitle:Ovislink inurl:private/login
+intitle:phpnews.login
+intitle:plesk inurl:login.php3
+inurl:"/admin/configuration. php?" Mystore
+inurl:"/slxweb.dll/external?name=(custportal|webticketcust)"
+inurl:"1220/parse_xml.cgi?"
+inurl:"631/admin" (inurl:"op=*") | (intitle:CUPS)
+inurl:":10000" intext:webmin
+inurl:"Activex/default.htm" "Demo"
+inurl:"calendar.asp?action=login"
+inurl:"default/login.php" intitle:"kerio"
+inurl:"gs/adminlogin.aspx"
+inurl:"php121login.php"
+inurl:"suse/login.pl"
+inurl:"typo3/index.php?u=" -demo
+inurl:"usysinfo?login=true"
+inurl:"utilities/TreeView.asp"
+inurl:"vsadmin/login" | inurl:"vsadmin/admin" inurl:.php|.asp
+inurl:/admin/login.asp
+inurl:/cgi-bin/sqwebmail?noframes=1
+inurl:/Citrix/Nfuse17/
+inurl:/dana-na/auth/welcome.html
+inurl:/eprise/
+inurl:/Merchant2/admin.mv | inurl:/Merchant2/admin.mvc | intitle:"Miva Merchant Administration Login" -inurl:cheap-malboro.net
+inurl:/modcp/ intext:Moderator+vBulletin
+inurl:/SUSAdmin intitle:"Microsoft Software upd?t? Services"
+inurl:/webedit.* intext:WebEdit Professional -html
+inurl:1810 "Oracle Enterprise Manager"
+inurl:2000 intitle:RemotelyAnywhere -site:realvnc.com
+inurl::2082/frontend -demo
+inurl:administrator "welcome to mambo"
+inurl:bin.welcome.sh | inurl:bin.welcome.bat | intitle:eHealth.5.0
+inurl:cgi-bin/ultimatebb.cgi?ubb=login
+inurl:Citrix/MetaFrame/default/default.aspx
+inurl:confixx inurl:login|anmeldung
+inurl:coranto.cgi intitle:Login (Authorized Users Only)
+inurl:csCreatePro.cgi
+inurl:default.asp intitle:"WebCommander"
+inurl:exchweb/bin/auth/owalogon.asp
+inurl:gnatsweb.pl
+inurl:ids5web
+inurl:irc filetype:cgi cgi:irc
+inurl:login filetype:swf swf
+inurl:login.asp
+inurl:login.cfm
+inurl:login.php "SquirrelMail version"
+inurl:metaframexp/default/login.asp | intitle:"Metaframe XP Login"
+inurl:mewebmail
+inurl:names.nsf?opendatabase
+inurl:ocw_login_username
+inurl:orasso.wwsso_app_admin.ls_login
+inurl:postfixadmin intitle:"postfix admin" ext:php
+inurl:search/admin.php
+inurl:textpattern/index.php
+inurl:WCP_USER
+inurl:webmail./index.pl "Interface"
+inurl:webvpn.html "login" "Please enter your"
+Login ("
+Jetbox One CMS Ã¢?Â¢" | "
+Jetstream ? *")
+Novell NetWare intext:"netware management portal version"
+Outlook Web Access (a better way)
+PhotoPost PHP Upload
+PHPhotoalbum Statistics
+PHPhotoalbum Upload
+phpWebMail
+Please enter a valid password! inurl:polladmin
+INDEXU
+Ultima Online loginservers
+W-Nailer Upload Area
+intitle:"DocuShare" inurl:"docushare/dsweb/" -faq -gov -edu
+"#mysql dump" filetype:sql
+"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3
+"allow_call_time_pass_reference" "PATH_INFO"
+"Certificate Practice Statement" inurl:(PDF | DOC)
+"Generated by phpSystem"
+"generated by wwwstat"
+"Host Vulnerability Summary Report"
+"HTTP_FROM=googlebot" googlebot.com "Server_Software="
+"Index of" / "chat/logs"
+"Installed Objects Scanner" inurl:default.asp
+"MacHTTP" filetype:log inurl:machttp.log
+"Mecury Version" "Infastructure Group"
+"Microsoft (R) Windows * (TM) Version * DrWtsn32 Copyright (C)" ext:log
+"Most Submitted Forms and s?ri?ts" "this section"
+"Network Vulnerability Assessment Report"
+"not for distribution" confidential
+"not for public release" -.edu -.gov -.mil
+"phone * * *" "address *" "e-mail" intitle:"curriculum vitae"
+"phpMyAdmin" "running on" inurl:"main.php"
+"produced by getstats"
+"Request Details" "Control Tree" "Server Variables"
+"robots.txt" "Disallow:" filetype:txt
+"Running in Child mode"
+"sets mode: +p"
+"sets mode: +s"
+"Thank you for your order" +receipt
+"This is a Shareaza Node"
+"This report was generated by WebLog"
+( filetype:mail | filetype:eml | filetype:mbox | filetype:mbx ) intext:password|subject
+(intitle:"PRTG Traffic Grapher" inurl:"allsensors")|(intitle:"PRTG Traffic Grapher - Monitoring Results")
+(intitle:WebStatistica inurl:main.php) | (intitle:"WebSTATISTICA server") -inurl:statsoft -inurl:statsoftsa -inurl:statsoftinc.com -edu -software -rob
+(inurl:"robot.txt" | inurl:"robots.txt" ) intext:disallow filetype:txt
++":8080" +":3128" +":80" filetype:txt
++"HSTSNR" -"netop.com"
+-site:php.net -"The PHP Group" inurl:source inurl:url ext:pHp
+94FBR "ADOBE PHOTOSHOP"
+AIM buddy lists
+allinurl:/examples/jsp/snp/snoop.jsp
+allinurl:cdkey.txt
+allinurl:servlet/SnoopServlet
+cgiirc.conf
+cgiirc.conf
+contacts ext:wml
+data filetype:mdb -site:gov -site:mil
+exported email addresses
