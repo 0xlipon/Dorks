@@ -130,7 +130,7 @@
 
     function scannow() {
         const scanbtn = document.querySelector('#urlInput').value;
-        fetch('https://raw.githubusercontent.com/coffinsp/payloads/main/xss.txt')
+        fetch('https://raw.githubusercontent.com/0xlipon/payloads/refs/heads/main/xss.txt')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
