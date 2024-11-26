@@ -40,3 +40,41 @@ site:pastebin.com "password"
 site:github.com "SECRET_KEY"
 site:gitlab.com "PRIVATE_KEY"
 site:bitbucket.org "db_password"
+intitle:"index of"
+inurl:backup "Parent Directory"
+"directory listing"
+inurl:admin
+inurl:/wp-admin/admin-ajax.php
+inurl:login
+"sql syntax error"
+intext:"you have an error in your SQL syntax"
+inurl:sql
+ext:sql
+ext:bak
+ext:zip
+ext:log
+inurl:log
+"error log"
+ext:env
+ext:config
+inurl:config
+"api_key"
+"apikey"
+"access_key"
+Custom Error Messages
+"fatal error"
+"uncaught exception"
+"warning"
+Development Files
+ext:php
+ext:js
+ext:json
+inurl:login | inurl:logon | inurl:sign-in | inurl:signin | inurl:portal
+intitle:"cs141 webmanager"
+inurl:"/phpinfo.php" | inurl:".htaccess"
+ext:php intitle:phpinfo "published by the PHP Group"
+filetype:txt @gmail.com OR @yahoo.com OR @hotmail.com OR @aol.com
+“index of” inurl:.git
+intitle:"Lost Password Reset" | inurl:/secure/pwreset.php | inurl:/portal/index.php
+filetype:url +inurl:"ftp://" +inurl:";@"
+filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"
